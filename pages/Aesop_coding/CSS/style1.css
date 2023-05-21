@@ -1,0 +1,960 @@
+@charset 'utf-8';
+/* CSS Document */
+
+/* @font-face {
+    font-family: 'MaruBuri-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html{
+    font-family: 'MaruBuri-Regular';
+} */
+
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+    font-family: 'Chosunilbo_myungjo';
+}
+
+.hide{
+    height: 0;
+    text-indent: -9999px;
+    color: transparent;
+    font-size: 0;
+}
+
+/* setting */
+
+/* color : 
+background : #f2f1e9
+background_2 : #d9bca3
+point : #a68c7c
+black : #262626 */
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.wrap{
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+header{
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+    z-index: 999;
+}
+
+.hWrap{
+    width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* HEADER LOGO */
+.hWrap .headerLogo{
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+   
+    background-image: url(../img/logo/logo_white_small.png);
+    background-size: cover;
+    background-position: center;
+
+    position: absolute;
+    left: 50%; transform: translateX(-50%);
+}
+
+/* HEADER MENU */
+
+.hWrap .headerMenu{
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    margin-left: 900px;
+}
+
+.hWrap .headerMenu>li{
+
+    width: 100px;
+    text-align: center; line-height: 40px;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* HEADER BUTTON */
+
+.allBtn{
+    cursor: pointer;
+    
+    background-color:rgba(0, 0, 0, 0.5);
+    border: 0;
+    width: 40px; height: 40px;
+    position:fixed;
+    right: 5%;
+    top:0;
+    z-index: 1002;
+}
+
+.allBtn span{
+    display: block;
+    width: 30px;
+    height: 1.5px;
+    background-color: white;
+    border-radius: 15px;
+    position: absolute; 
+    top: 18px; 
+    left: 5px;
+
+   transition: transform 0.8s;
+   z-index: 9999;
+}
+
+.allBtn span:nth-child(1){
+    top: 10px;
+}
+
+.allBtn span:nth-child(3){
+    top: 26px;
+}
+
+/* BUTTON - ACTIVE */
+
+.allBtn.active span:nth-child(1){
+    top: 18px;
+    transform: rotate(45deg);
+}
+
+.allBtn.active span:nth-child(2){
+    opacity: 0; 
+}
+
+.allBtn.active span:nth-child(3){
+    top:18px;
+    transform: rotate(-45deg);
+}
+
+/* ASIDE */
+
+aside{
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    right: -100%; top: 0;
+
+    background-color: #f2f1e9;
+    color: #363636;
+
+    z-index: 1001;
+}
+
+aside .gnb{
+    display: flex;
+    width: 100%;
+    font-family: georgia;
+}
+
+aside .gnb>li{
+    flex:1;
+    text-align: center;
+    font-size: 16px;
+    line-height: 60px;
+}
+
+aside .gnb>li>a{
+    padding-top: 40px;
+    display: block;
+
+    border-bottom: 2px solid #bbb3ae;
+    transition: all 0.2s;
+}
+
+aside .gnb>li>a.click{
+    border-bottom: 2px solid #124;
+}
+
+aside .gnb>li>a:after{
+    content: '';
+    height:2px;
+    width: 0;
+    display: block;
+    background-color: rgb(124, 124, 124);
+}
+
+aside .gnb>li>a.on:after{
+    transition: all 0.6s;
+    width: 100%;
+}
+
+
+/* ASIDEWRAP */
+
+.asideWrap{
+    display: flex;
+    height: calc(100vh - 102px);
+
+    transition: background-color 0.2s;
+}
+
+.asideWrap .logoImg{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.asideWrap .subMenu{
+    width: 50%;
+}
+.asideWrap .bgImg{
+    width: 30%;
+    overflow: hidden;
+}
+
+.asideWrap .bgImg img{
+    height: 100%;
+    animation: resizing infinite alternate 9s;
+    display: block;
+}
+
+@keyframes resizing{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.3);
+    }
+}
+
+
+
+.subMenu>div{
+    height: 100%;
+    
+    display: none;
+}
+
+.subMenu>div:first-child{
+    display: block;
+}
+
+.subMenu .list{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 200px;
+    box-sizing: border-box;
+    width: 90%;
+}
+
+.subMenu .list li{
+    line-height: 40px;
+    font-size: 16px;
+    padding-left: 60px;
+    border-bottom: 1px solid #a68c7c;
+}
+
+.subMenu .list li:hover{
+    color: #000;
+}
+
+.subMenu .sub9{
+    padding-top: 180px;
+    padding-left: 150px;
+}
+
+.subMenu .sub9 form{
+    position: relative;
+    width: 400px;
+}
+
+.subMenu .sub9 form input{
+    width: 100%;
+    line-height: 24px;
+    font-size: 14px;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #68574c;
+    color: #68574c;
+    outline-color: #68574c;
+    padding-left: 20px;
+}
+
+.subMenu .sub9 form button{
+    position: absolute;
+    top: 2.5px; right: 5px;
+    border: none;
+    font-size: 18px;
+    color: #68574c;
+    background-color: transparent;
+}
+
+/* C1 - MAINVIDEO */
+
+.c1{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.c1 .mainVideo{
+    overflow: hidden;
+    width: 100%; 
+    height: 100vh
+}
+
+.c1 video{
+    position: relative;
+    top: 0; left: 0;
+    min-width: 1600px;
+    width: 100%;
+}
+
+/* C1 - MAINLOGO */
+
+.c1 .mainLogo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    animation-name: fade;
+    animation-duration: 3s; /*러닝타임*/
+    animation-delay: 1s; /*시작하기 전까지 딜레이*/
+    animation-iteration-count: 1; /*한번만*/
+    animation-fill-mode: forwards; /*계속 지속*/
+    opacity: 0; /*초기상태 세팅*/
+}
+
+@keyframes fade{
+    0%{opacity: 0;}
+    100%{opacity:1}
+}
+
+/* C2 - popular */
+
+.c2{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid  #f2f1e9;
+    border-bottom: 1px solid #f2f1e9;
+    display: flex;
+}
+
+.c2 .txtBox{
+    user-select: none;
+
+    position: absolute;
+    left: 0; top: 0;
+    
+    max-width: 40%;
+    width: 70%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    color: rgba(255, 255, 255, 0.9);
+    padding-left: 50px;
+
+}
+
+.c2 .txtBox .txt{
+    width: 70%;
+    height: 100%;
+}
+
+.c2 .txtBox .txt .title{
+    line-height: 100px;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.c2 .txtBox .txt .detail{
+    max-width: 500px;
+    width: 70%;
+    padding: 100px;
+    margin-top: 80px;
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%); 
+    font-size: 16px;  
+    font-weight: 100;
+    line-height: 2;  
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+.c2 .txtBox .txt .loadBtn{
+    cursor: pointer;
+
+    width: 60%;
+    height: 40px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #fff;
+
+    font-size: 16px;
+    font-family: georgia;
+    margin-top: 260px;
+    margin-left: 20%;
+
+    transition: all 0.2s;
+}
+
+.c2 .txtBox .txt button:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #363636;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+} 
+
+/* bgSlide */
+
+.c2 .bgSlide{
+
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.c2 .bgSlide .bgBox{
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    display: none;
+}
+
+.c2 .bgSlide .bgBox1{
+    display: block;
+}
+
+.c2 .bgSlide img{
+   width: 100%;
+}
+
+
+
+/* productSlide */
+
+.c2 .productSlide{
+    width: 1100px;
+    position: absolute !important;
+    left: 50%;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.c2 .productSlide .item{
+    width: 200px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.c2 .productSlide img{
+    height: 180px;
+    /* box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.1); */
+}
+
+.c2 .c2_arrow{
+    position: absolute;
+    top: 28%; left: 55%;
+    font-size: 28px;
+    color: #fff;
+    opacity: 0.7;
+
+    animation: motion 0.4s linear 0s infinite alternate;
+    margin-top: 0;
+}
+
+@keyframes motion {
+	0% {margin-top: 0px;}
+	100% {margin-top: 3px;}
+}
+
+/* c3_philosophy */
+
+/* color : 
+background : #f2f1e9
+background_2 : #d9bca3
+point : #a68c7c
+black : #262626 */
+
+.c3{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.c3 .c3_bg{
+    background-image: url(../img/philosophy/fragnance2.jpg);
+    width: 100%; height: 100vh;
+    background-size: cover;
+    position: absolute;
+    top: 0; left: 0;
+} 
+
+.outline{
+    position: relative;
+    width: 450px; height: 600px;
+   top: 50%; transform: translateY(-50%);
+   left: 60%;
+   opacity: 0.8;
+
+}
+
+.outline span{
+    position: absolute;
+    background-color: #f2f1e9;
+}
+
+.outline span:nth-child(1){
+    left: 0; top: 0;
+    width: 0; height: 1px;
+    transition: width 0.1s;
+}
+.outline span:nth-child(2){
+    right: 0; top: 0; 
+    width: 1px; height: 0;
+    transition: height 0.1s linear 0.2s;
+}
+.outline span:nth-child(3){
+    right: 0; bottom: 0; 
+    width: 0; height: 1px;
+    transition: width 0.1s linear 0.3s;
+}
+.outline span:nth-child(4){
+    left: 0; top: 0;
+    width: 1px; height: 0;
+    transition: height 0.1s linear 0.4s;
+}
+
+.c3.active span:nth-child(1){width: 100%;}
+.c3.active span:nth-child(2){height: 100%;}
+.c3.active span:nth-child(3){width: 100%;}
+.c3.active span:nth-child(4){height: 100%;}
+
+.c3 .box{
+    user-select: none;
+
+    position: absolute;
+    background-color: transparent;
+    width: 450px; height: 600px;
+    top: 50%; transform: translateY(-45%);
+    left: 60%;
+
+    display: none;
+}
+
+.c3 .logo{
+    height: 40px; width: 380px;
+    margin-left: 20px; 
+
+    border-bottom: 3px solid #f2f1e9;
+    opacity: 0.8;
+}
+
+.c3 .logo img{
+    height: 55px;
+}
+
+.c3 .title{
+    width: 380px;
+    margin-left: 20px;
+    font-family:'Arial';
+    font-weight: 700;
+    font-size: 32px;
+    border-bottom: 2px solid #cbcca9;
+    color: #f2f1e9;
+    line-height: 45px;
+    padding-top: 10px;
+    padding-left: 5px;
+    opacity: 0.8;
+}
+
+.c3 .subt1{
+    color: #f2f1e9;
+    font-family: arial;
+    font-weight: 500;
+    line-height: 26px;
+
+    margin-left: 20px;
+    margin-top: 180px;
+    font-size: 18px;
+
+    opacity: 0.8;
+}
+
+.c3 .subt2{
+    color: #cbcca9;
+    margin-left: 20px;
+    font-size: 13px;
+}
+
+.c3 .detail1,
+.c3 .detail2{
+    font-size: 12px;
+}
+
+.c3 .detail1{
+    color: #f2f1e9;
+    margin-top: 50px;
+    opacity: 0.8;
+    line-height: 2;
+    padding: 0 10px 0 20px;
+}
+
+.c3 .detail2{
+    color: #cbcca9;
+    line-height: 2;
+    padding: 0 40px 0 20px;
+    letter-spacing: 0.5px;
+}
+
+.c3 .underLine{
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 380px;
+    border-top: 1px solid #cbcca9;
+    opacity: 0.8;
+}
+
+/*C4 - STORE ********/
+
+.c4{
+    width: 100%;
+    height: 600px;
+    position: relative;
+    user-select: none;
+}
+
+.c4 .storeSlide{
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+.c4 .storeSlide .store{
+    height: 600px !important;
+    width: 100%;
+}
+
+.c4 .storeSlide .store1{
+    display: block;
+
+    background-image: url(../img/store/seongsoo_5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.c4 .storeSlide .store2{
+    background-image: url(../img/store/soundshannam1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.c4 .storeSlide .store3{
+    background-image: url(../img/store/jeju_tapdong_1.jpg);
+    background-size: cover;
+   background-position-y: -200px;
+}
+.c4 .storeSlide .store4{
+    background-image: url(../img/store/busan_haeundae2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.c4 .c4_detail{
+    position: absolute;
+    top: 10%; left: 50%; 
+    transform: translateX(-50%);
+    text-align: center;
+    backdrop-filter: blur(3px);
+    box-shadow: rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    width: calc(85.60mm*1.3);
+    height: calc(53.98mm*1.3);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.c4 .c4_detail .title{
+    line-height: 100px;
+    font-family: georgia;
+    font-weight: 500;
+    font-size:46px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.c4 .c4_detail .descript{
+    line-height: 28px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+.c4 .c4_detail .findBtn{
+    display: flex;
+    border: 1px solid #fff;
+    width: 160px;
+    height: 30px;
+    transition: all 0.2s;
+    margin-top: 20px;
+}
+
+.c4 .c4_detail .findBtn h5{
+    cursor: pointer;
+    color: #fff;
+    font-weight: 300;
+    width: 130px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 14px;
+    border-right: 1px solid #fff;
+
+}
+
+.c4 .c4_detail .findBtn button{
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    color: white;
+    font-weight: 100;
+}
+
+.c4 .c4_detail .findBtn button i{
+    opacity: 0.9;
+    font-size: 14px;
+}
+
+.c4 .c4_detail .findBtn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* C4-txtSlide , Btn */
+
+.c4 .TXT{
+    /* position: absolute;
+    bottom: 15%; left: 50%;
+    transform: translateX(-50%); */
+    display: flex;
+    width: 800px;
+}
+
+.c4 .txtSlide{
+    border: 1px solid #fff;
+    border-radius: 60px;
+    
+    position: absolute !important;
+    left: 50%; transform: translateX(-50%);
+    bottom: 15%;
+
+    width: 600px;
+    height: 35px;
+    transition: background-Color 0.2s;
+}
+
+.c4 .txtSlide .txt a{
+    max-width: 600px; 
+    line-height: 35px;
+    width: 100%; 
+    height: 35px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+    display: block;
+}
+
+.c4 .txtSlide .txt1{
+    display: block;
+}
+
+/* c4-button!! */
+
+.c4 .TXT .txtSlideBtn{
+    display: flex;
+    position: absolute;
+    bottom: 15%;
+    width: 700px;
+    left: 50%; transform: translateX(-50%);
+    justify-content: space-between;
+}
+
+.c4 .TXT .txtSlideBtn .prev, 
+.c4 .TXT .txtSlideBtn .next{
+    cursor: pointer;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 35px; height: 35px;
+    text-align: center; 
+    line-height: 35px;
+    font-size: 18px;
+    color: #fff;
+
+    transition: all 0.2s;
+}
+
+.c4 .TXT .txtSlideBtn .prev:hover, 
+.c4 .TXT .txtSlideBtn .next:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* footer */
+
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: #222;
+}
+
+footer .fWrap{
+    width: 1320px;
+    height: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+footer .fWrap .logo{
+    width: 20%;
+    height: 100%;
+    position: relative;
+}
+
+footer .fWrap .logo img{
+    width: 160px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+footer .fWrap .btMenu{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid #fff;
+    padding-right: 110px;
+}
+
+footer .fWrap .btMenu .csMenu{
+    margin-bottom: 20px;
+}
+
+
+footer .fWrap .btMenu .csMenu,
+footer .fWrap .btMenu .comMenu,
+footer .fWrap .btMenu ul{
+    display: flex;
+    color: #fff;
+    line-height: 16px;
+}
+
+footer .fWrap .btMenu h3{
+    font-weight: 100;
+    width: 20%;
+    font-size: 16px;
+    text-align: center;
+    margin-right: 20px;
+    border-right: 1px solid #fff;
+}
+
+footer .fWrap .btMenu ul{
+    width: 380px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 14px;
+}
+
+footer .fWrap .btMenu .csMenu ul>li{
+    width: 20%;
+}
+
+footer .fWrap .btMenu .comMenu ul>li{
+    width: 30%; 
+}
+footer .fWrap .btMenu .comMenu ul>li:last-child{
+    width: 10%;
+}
+footer .fWrap .btMenu .comMenu i{
+    font-size: 18px;
+}
+
+footer .fWrap .company{
+    margin-top: 20px;
+    width: 30%;
+    margin-left: 5%;
+    height: 100%;
+    color: #fff;
+}
+
+footer .fWrap .company h3{
+    font-weight: 100;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+footer .fWrap .company span{
+    font-size: 14px;
+    line-height: 18px;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+

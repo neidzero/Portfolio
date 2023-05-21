@@ -1,0 +1,868 @@
+
+
+@media all and (min-width:1200px){
+
+    /*
+    레이아웃{
+        max-width:1320px;
+        width:95%;
+        margin-left:auto;
+        margin-right:auto;
+
+        tablet : 
+    }
+    */
+
+    /* PC VER */
+
+    /* Mobile hide */
+
+    .wrap{
+        overflow-x: hidden;
+    }
+    .pcVer, .pcVideo{
+        display: unset;
+    }
+
+    /* HEADER */
+    header{
+        width: 100%;
+        position: fixed;
+        z-index: 999;
+    }
+
+    header .mobileVer{
+        display: none;
+    }
+
+    header .hWrap{
+        max-width: 1320px;
+        width: 95%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 20px;
+    
+        font-family: 'Pretendard';
+        color: #fff;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .hWrap .Btn .allBtn{
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    
+    header .hWrap .logo{
+
+        cursor: pointer;
+
+        width: 60px;
+        height: 60px;
+
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        background-image: url(../img/logo/mobilewhitecircleLogo.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    header .hWrap .headerGnb ul{
+        display: flex;
+        line-height: 100px;
+        text-align: center;
+    }
+
+    header .hWrap .headerGnb ul>li{
+        width: 100px;
+        font-size: 16px;
+        font-weight: 200;
+    }
+
+    
+/* ASIDE */
+
+/* Aside left 0 > allBtn pcVer fadeOut */
+
+aside .tabBtn{
+    display: none;
+}
+
+aside .btLogo{
+    display: none;
+}
+
+aside{
+    max-width:1320px;
+    width:25%;
+    height: 100vh;
+
+    z-index: 1000;
+    position: fixed;
+    top: 0; left: -100%;
+
+    color: #fff;
+    background-color: transparent;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+aside .asideTop .asideLogo{
+    display: none;
+}
+
+aside .asideTop .closeBtn{
+    color: #fff;
+
+    position: absolute;
+
+    top: 20px; left: 30px;
+
+    font-size: 30px;
+    width: 50px;
+
+    text-align: center;
+    cursor: pointer;
+}
+
+aside .asideTop h1{
+    width: 280px;
+    font-family: 'Pretendard';
+    margin-top: 80px;
+    line-height: 80px;
+    font-size: 60px;
+    font-weight: 100;
+    text-align: right;
+}
+
+
+/* ASIDE MENU */
+
+aside .gnb>li>a::after,
+aside .commu .btMenu>a::after{
+    display: none;
+}
+
+aside .gnb{
+    position: relative;
+    color: #fff;
+    width: 270px;
+
+    text-align: unset;
+    margin-top: 20px;
+    font-family: 'Pretendard';
+}
+
+aside .commu{
+    display: block;
+    color: #fff;
+    margin-top: 50px;
+}
+
+aside .commu>li:first-child{
+    border: 0;
+}
+
+aside .gnb>li{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: right;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+aside .gnb>li>a{
+    margin-left: auto;
+}
+
+aside .gnb .subMenu{
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: 200;
+
+    display: none;
+}
+
+aside .btCall{
+    font-weight: 200;
+    
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+}
+
+
+/* C1-MAINVIDEO */
+
+.c1{
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.c1 .pcVideo{
+    width: 100%;
+}
+
+.c1 .mobileImg,
+.c1 .mobileVer{
+    display: none;
+}
+
+/* C2-productMenu */
+
+
+.c2{
+    width: 100%;
+    background-color: #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+}
+
+.c2 .c2Wrap{
+    max-width: 1320px;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.c2 .c2Wrap .c2Products{
+
+    max-width: 1320px;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 40px;
+    align-items: center;
+    position: relative;
+}
+
+.c2 .c2Wrap .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.c2 .c2Wrap .box .item img{
+    height: 150px;
+    margin-bottom: 10px;    
+}
+
+.c2 .c2Wrap .box .name{
+    width: 150px;
+    line-height: 25px;
+    
+    color: #fff;
+    border: 1px solid #ee2a24;
+    border-radius: 50px;
+
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+
+    transition: all 0.2s;
+}
+
+
+.c2 .c2Wrap .c2Products .box .name.active{
+    background-color: #ee2a24;
+    color: #fff;
+    font-weight: 400;
+}
+
+/* C3 : BEST : SLICK SLIDES */
+
+.c3{
+    position: relative;
+
+}
+
+/* ITEMSLIDE */
+
+
+.c3 .itemSlide{
+    /* slick */
+    width: 100%;
+    height: 100vh;
+}
+
+.c3 .itemSlide .item{
+    background-size: cover;
+    background-position-y: center ;
+    
+    height: 100%;
+}
+
+.c3 .itemSlide .item1{
+    background-image: url(../img/c3_sell/beoplayHX.jpg);
+}
+
+.c3 .itemSlide .item2{
+    background-image: url(../img/c3_sell/beoplayA9.jpg);
+}
+
+.c3 .itemSlide .item3{
+    background-image: url(../img/c3_sell/beovision_avanttelevition.jpg);
+    background-position-x: center;
+}
+
+.c3 .itemSlide .item4{
+    background-image: url(../img/c3_sell/tv_harmony_detailcut.jpg);
+}
+
+
+/* TXTSLIDE */
+
+.c3 .txtSlide{
+
+    max-width: 1320px;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+
+    position: absolute;
+    top: 60%;
+    display: flex;
+} 
+
+.c3 .txtSlide .txt{
+    /* slick */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.c3 .txtSlide.mobileVer .txt h3,
+.c3 .txtSlide.mobileVer .txt h1,
+.c3 .txtSlide.mobileVer .txt h2{
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 60px;
+    font-family: 'Pretendard';
+}
+
+.c3 .txtSlide.mobileVer .txt h3{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.c3 .txtSlide.mobileVer .txt h2{
+    font-size: 20px;
+    font-weight: 200;
+    display: block;
+    line-height: 30px;
+}
+
+.c3 .txtSlide.mobileVer .txt h1{
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.c3 .txtSlide.mobileVer .txt{
+    margin: unset;
+    color: #fff;
+}
+
+/* ARROW */
+
+.c3 .prvArrow,
+.c3 .nxtArrow{       
+    line-height: 400px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 60px;
+    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.c3 .prvArrow{left: 120px;}
+.c3 .nxtArrow{right: 120px;}
+
+
+/* C4 : PROMOTION */
+
+.c4{
+    background-color: #000;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+}
+
+    .c4 .bigPhoto{
+    height: 100vh;
+    width: 35%;
+
+    background-image: url(../img/promotion/ferrari_red.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.c4 .promotion{
+    width: 65%;
+    height: 100vh;
+}
+
+.c4 .promotion .upperPromotion{
+    display: flex;
+    flex-direction: row-reverse;
+
+    height: 50vh;
+}
+
+.c4 .promotion .bottomPromotion{
+    display: flex;
+
+    width: 100%;
+    height: 50vh;
+}
+
+.c4 .promotion .txt{
+    position: unset;
+
+    width: 50%;
+    height: 100%;
+
+    color: #fff;
+    /* background-color: #ee2a24; */
+
+    background: linear-gradient(to right, #ee2a24 10%,  #ee5a24);
+
+    font-family: 'Pretendard';
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    
+}
+
+.c4 .promotion .bottomPromotion .txt{
+    position: unset;
+
+    width: 50%;
+    height: 100%;
+
+    color: #fff;
+    /* background-color: #ee2a24; */
+    background: linear-gradient(to left, #ee2a24 10%,  #ee5a24);
+    font-family: 'Pretendard';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.c4 .promotion .txt h3{
+    
+    width: 90%;
+
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+}
+
+.c4 .promotion .txt h3,
+.c4 .promotion .txt .loadBtn{
+    margin-left: 30px;
+}
+
+.c4 .promotion .txt .loadBtn{
+    width: 220px;
+    line-height: 30px;
+
+    border: 1px solid #fff;
+    border-radius: 100px;
+    margin-top: 15px;
+
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 400;
+
+    transition: all 0.2s;
+}
+
+.c4 .promotion .txt .loadBtn.active{
+    background-color: #fff;
+    color: #000;
+}
+
+.c4 .promotion .photo1{
+    background-image: url(../img/promotion/ferrari_black.jpg);
+    position: static;
+    width: 50%;
+    height: 50vh;
+    
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.c4 .promotion .photo2{
+    position: static;
+    width: 50%;
+    height: 50vh;
+    background-image: url(../img/promotion/retro_blak.jpg);
+    
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes up{
+    0%{transform: translateY(0);}
+    100%{transform: translateY(-20px);}
+}
+
+@keyframes down{
+    0%{transform: translateY(-20px);}
+    100%{transform: translateY(0);}
+}
+
+
+/* C5-ARTOFTHE A9  */
+
+.c5{
+    height: 150vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    overflow: hidden;
+}
+
+.c5 .obj{
+    z-index: 900;
+    position: relative;
+}
+
+.c5 .artist{
+    z-index: 900;
+    position: relative;
+}
+
+.c5 .c5Wrap{
+    max-width: 1320px;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0;
+    position: relative;
+}
+
+/* c5 text */
+
+.c5 .mobileVer{
+    display: none;
+}
+
+.c5 h1,
+.c5 h2,
+.c5 h3,
+.c5 .loadBtn{
+    color: #fff;
+    text-align: center;
+}
+
+.c5 h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: 50px;
+    opacity: 0.9;
+    line-height: 60px;
+
+    margin-top: 60px;   
+}
+
+.c5 h2{
+    font-family: 'Pretendard';
+    font-weight: 200;
+    letter-spacing: 2px;
+    font-size: 36px;
+    line-height: 44px;
+
+    margin: 80px 0;
+
+    z-index: 900;
+    position: relative;
+}
+
+.c5 h3,
+.c5 .loadBtn{
+    position: absolute;
+    font-family: 'Pretendard';
+    font-weight: 300;
+}
+
+.c5 h3{
+    width: 1000px;
+    bottom: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.c5 .loadBtn{
+
+    border: 1px solid #fff;
+    border-radius: 50px;
+
+    width: 240px;
+    position: absolute;
+    left: 50%; bottom:80px;
+    transform: translateX(-50%);
+
+    line-height: 25px;
+    font-size: 18px;
+
+    transition: all 0.2s;
+}
+
+.c5 .loadBtn.active{
+    background-color: #fff;
+    color: #000;
+}
+
+/*Pic + gradation*/
+
+.c5 .c5Wrap .bgPic{
+    /*zindex h2,obj를 더 크게 하고
+    bgPic 다음, picGrad 순으로 했는데도
+    텍스트가 가려짐!*/
+
+    width: 500px;
+    z-index: 888;
+    
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+
+
+    background-image: url(../img/artofthea9/artoftheA9model.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.c5 .c5Wrap .picGrad{
+    z-index: none;
+
+    display: block;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 1000px;
+    height: 600px;
+
+    background: radial-gradient(#ee5a24,transparent 60%);
+}
+
+
+
+.c5 .obj{
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    background-position: center;
+    background-size: cover;
+}
+
+/*요한나 두메 좌우반전 png + obj 300정도 사이즈로 만들기*/
+
+.c5 .obj1{
+    background-image: url(../img/artofthea9/300Alexis.png);
+    top: 20%; left: 27%;
+}
+
+.c5 .obj2{
+    background-image: url(../img/artofthea9/300yohannaD.png);
+    right: 25%; top: 50%;
+}
+
+.c5 .obj3{
+    background-image: url(../img/artofthea9/300Manoncezaro.png);
+    left: 25%; top: 57%;
+}
+
+
+/* FOOTER */
+
+footer{
+    width: 100%;
+    height: 400px;
+    background-color: #efefef;
+}
+
+footer .fWrap{
+   max-width: 1320px;
+   width: 95%;
+   margin-left: auto;
+   margin-right: auto;
+
+
+   display: flex;
+}
+
+/*footer left*/
+
+footer .fWrap .left{
+    display: unset;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer .fWrap .left .btLogo img{
+    height: 160px;
+    margin-left: unset;
+    margin-left: 80px;
+}
+
+footer .fWrap .left .sns{
+    display: flex;
+    font-size: 26px;
+    margin-left: unset;
+    margin-left: 100px;
+}
+
+footer .fWrap .left .sns i{
+    width: 40px;
+    line-height: 40px;
+    border: 2px solid #000;
+    border-radius: 100%;
+    text-align: center;
+    margin-right: 20px;
+
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+footer .fWrap .left .sns i:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+/*footer right*/
+
+footer .fWrap .right{
+    display: flex;
+    align-items: center;
+}
+
+footer ul{
+   display: block;
+
+   margin-top: 20px;
+
+   color: #363636;
+   font-size: 16px;
+   font-weight: 200;
+}
+
+footer ul>li{
+    line-height: 30px;
+}
+
+footer .menu:first-child{
+    margin-top: unset;    
+    margin-right: 60px;
+}
+
+footer .menu:first-child ul>li:last-child{
+    font-weight: 400;
+}
+
+footer .menu h3{
+    letter-spacing: 1px;
+    font-size: 22px;
+    font-weight: 600;
+    cursor: unset;
+    font-family: 'Pretendard';
+    color: #363636;
+
+    line-height: 40px;
+    text-align: left;
+
+    padding-left: unset;
+}
+
+footer .copy{
+    width: 100%;
+    border-top: 1px solid #000;
+    padding-left: 40px;
+    font-family: 'Pretendard';
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

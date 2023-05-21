@@ -1,0 +1,735 @@
+/*MOBILE CSS*/
+
+.pcVer{
+    display: none;
+}
+
+/* HEADER  */
+
+header{
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+
+header .hWrap{
+    display: flex;
+    align-items: center;
+   
+    justify-content: space-around;    
+
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+
+    height: 60px;
+    width: 100%;
+
+    color: #fff;
+    position: relative;
+}
+
+header .hWrap .logo{
+
+    height: 60px;
+    width: 60px;
+
+    background-image: url(../img/logo/mobilewhitecircleLogo.png);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+header .hWrap .headerGnb .mobileVer{
+    font-size: 14px;
+    height: 30px;
+    width: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    text-align: center;
+    line-height: 30px;
+    border-radius: 100%;
+    color: #fff;
+}
+
+
+/* menu btn */
+
+header .hWrap .Btn{
+    width: 30px;
+    height: 30px;
+}
+
+/* aside > left 0 : closeBtn display block, right 붙 */
+header .hWrap .Btn i{
+    cursor: pointer;
+
+    width: 30px;
+    height: 30px;
+
+    line-height: 30px;
+    text-align: center;
+
+    position: absolute;
+    font-size: 32px;
+    z-index: 1002;
+    color: #fff;
+}
+
+header .hWrap .Btn i.closeBtn{
+    display: none;
+}
+
+/* ASIDE  */
+
+aside{
+    
+    position: fixed;
+    color: #000;
+    top: 0;
+    left: -100%;
+
+    height: 100vh;
+    width:100%;
+    background-color: #fff;
+
+    z-index: 1000;
+}
+
+aside .asideTop{
+    width: 300px;
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    align-items: center;
+    margin-top: 60px;
+}
+
+aside .asideTop .asideLogo{
+
+    width: 60px;
+    border: 1px solid #000;
+    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+aside .asideTop .closeBtn{
+    cursor: pointer;
+
+    width: 30px;
+    height: 30px;
+
+    line-height: 30px;
+    text-align: center;
+
+    font-size: 32px;
+    z-index: 1002;
+    color: #000;
+}
+
+aside .tabBtn{
+    font-family: 'Pretendard';
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    margin-top: 40px;
+    border-bottom: 1px solid #000;
+    position: relative;
+}
+
+aside .tabBtn button{
+
+    cursor: pointer;
+
+    width: 50%;
+    line-height: 40px;
+    background-color: transparent;
+    font-size: 18px;
+    border: 0;
+    font-weight: 100;
+    letter-spacing: 4px;
+}
+
+aside .tabBtn button.active{
+    background-color: #000;
+    color: #fff;
+}
+
+aside .gnb{
+    
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 18px;
+    color: #000;
+    font-weight: 600;
+    width: 80%;
+    margin-top: 20px;
+    text-align: left;
+}
+
+aside .gnb>li{
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+    position: relative;
+}
+
+aside .gnb>li>a{
+    letter-spacing: 4px;
+    line-height: 40px;
+    position: relative;
+    width: 200px;
+    display: block;
+}
+
+aside .shop>li>a::after{
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #000;
+    border-radius: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 50%; right: 0;
+    transform: translateY(-50%);
+    transition: all 0.3s;
+}
+
+aside .shop>li>a.active::after{
+    background-color: transparent;
+}
+
+aside .gnb .subMenu{
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 30px;
+
+    display: none;
+
+}
+
+/* click하면 a에 active addClass 하고 걔 subMenu slideDown */
+
+aside .commu .btMenu>a::after{
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #000;
+    border-radius: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 50%; right: 0;
+    transform: translateY(-50%);
+    transition: all 0.3s;
+}
+
+aside .commu .btMenu>a.active::after{
+    background-color: transparent;
+}
+
+aside .commu{
+    display: none;
+}
+
+/* ASIDE BTLOGO */
+
+aside .btLogo{
+    opacity: 0.8;
+    height: 40px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+aside .btCall{
+    opacity: 0.8;
+    color: #222;
+    font-size: 14px;
+
+    font-family: 'Pretendard';
+
+    width: 320px;
+    line-height: 30px;
+    position: absolute;
+    left: 50%; bottom: 20px;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+
+/* C1-MAINVIDEO  */
+
+.c1{
+    overflow-x: hidden;
+    
+    height: 100vh;
+    background-color: #000;
+}
+
+.c1 .mobileImg{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0; top: 0;
+
+    background-image: url(../img/video/redPerson_rotate.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.c1 img.mobileVer{
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    width: 80%;
+    opacity: 0.9;
+}
+
+.pcVideo{
+    display: none;
+}
+
+/* C2-PRODUCTS */
+
+.c2{
+    width: 100%;
+
+    background-color: #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.c2 .c2Wrap .c2Products{
+    width: 80%;
+    max-width: 380px;
+    margin-right: auto;
+    margin-left: auto;
+
+    padding-top: 30px;
+    padding-bottom: 40px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
+}
+
+.c2 .c2Wrap .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.c2 .c2Wrap .box .item img{
+    height: 120px;    
+}
+
+.c2 .c2Wrap .box .name{
+    width: 120px;
+    
+    color: #fff;
+    border: 1px solid #ee2a24;
+    border-radius: 50px;
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+    line-height: 20px;
+}
+
+/* C3:BEST */
+
+.c3{
+    position: relative;
+}
+
+/* ITEMSLIDE */
+
+
+.c3 .itemSlide.mobileVer{
+    /* slick */
+    height: 800px;
+    background-color: #000;
+}
+
+.c3 .itemSlide.mobileVer .item{
+    background-size: cover;
+    background-position-y: center ;
+    height: 800px;
+}
+
+.c3 .itemSlide .item1{
+    background-image: url(../img/c3_sell/beoplayHX_mobile.jpg);
+}
+
+.c3 .itemSlide .item2{
+    background-image: url(../img/c3_sell/beoplayA9.jpg);
+}
+
+.c3 .itemSlide .item3{
+    background-image: url(../img/c3_sell/vision_television_purplecut.jpg);
+    background-position-x: center;
+}
+
+.c3 .itemSlide .item4{
+    background-image: url(../img/c3_sell/beosoundstage_soundbar.jpg);
+}
+
+
+/* TXTSLIDE */
+
+.c3 .txtSlide.mobileVer{
+
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    display: flex;
+    
+    width: 100%;
+} 
+
+.c3 .txtSlide.mobileVer .txt{
+    /* slick */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.c3 .txtSlide.mobileVer .txt h3,
+.c3 .txtSlide.mobileVer .txt h1{
+    width: 300px;
+    margin-left: 20px;
+    line-height: 44px;
+    font-family: 'Pretendard';
+}
+
+.c3 .txtSlide.mobileVer .txt h3{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.c3 .txtSlide.mobileVer .txt h2{
+    display: none;
+}
+
+.c3 .txtSlide.mobileVer .txt h1{
+    font-size: 44px;
+    font-weight: 600;
+}
+
+.c3 .txtSlide.mobileVer .txt:not(:first-child){
+    color: #fff;
+}
+
+.c3 .txtSlide.mobileVer:first-child{
+    color: #000;
+}
+
+.c3 .txtSlide.mobileVer .txt1,
+.c3 .txtSlide.mobileVer .txt2{
+    margin-top: 40px;
+}
+/* ARROW */
+
+.c3 .prvArrow,
+.c3 .nxtArrow{       
+
+    line-height: 400px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 60px;
+    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.c3 .prvArrow{left: 20px;}
+.c3 .nxtArrow{right: 20px;}
+
+/* C4 : PROMOTION */
+
+.c4{
+    background-color: #000;
+}
+
+.c4 .bigPhoto{
+height: 100vh;
+
+background-image: url(../img/promotion/ferrari_red.jpg);
+background-size: cover;
+   background-position: center;
+}
+
+.c4 .promotion{
+
+    height: 800px;
+}
+
+.c4 .promotion .upperPromotion{
+    position: relative;
+    height: 400px;
+}
+.c4 .promotion .bottomPromotion{
+    position: relative;
+    /*  */
+    width: 100%;
+    height: 400px;
+}
+
+
+.c4 .promotion .box{
+    /*  */
+    width: 100%;
+    height: 400px;
+
+    position: absolute;
+}
+
+.c4 .promotion .txt{
+    position: absolute;
+    color: #fff;
+    font-family: 'Pretendard';
+    left: 30px;
+    top: 240px;
+    width: 350px;
+}
+
+.c4 .promotion .txt h3{
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 600;
+}
+
+.c4 .promotion .txt .loadBtn{
+    width: 200px;
+    line-height: 30px;
+
+    border: 1px solid #fff;
+    border-radius: 100px;
+    margin-top: 15px;
+
+    padding-left: 20px;
+    font-size: 16px;
+    
+}
+
+.c4 .promotion .photo1{
+    background-image: url(../img/promotion/ferrari_black.jpg);
+    background-position-x: -30px;
+    background-position-y: -330px;
+    background-size: 200%;
+}
+
+.c4 .promotion .photo2{
+    background-image: url(../img/promotion/retro_blak.jpg);
+    background-position-y: -300px;
+    background-position-x: -120px;
+    background-size: 160%;
+}
+
+/* C5-ARTOFTHE A9 */
+
+.c5{
+    height: 1400px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.c5 .c5Wrap{
+    width: 370px;
+    margin-top: 100px;
+    position: relative;
+}
+
+.c5 h1,
+.c5 h2,
+.c5 h3,
+.c5 .loadBtn{
+    color: #fff;
+    text-align: center;
+}
+
+.c5 h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: 36px;
+    line-height: 40px;
+}
+
+.c5 h2{
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 45px;
+
+    margin: 100px 0;
+
+}
+
+.c5 h3,
+.c5 .loadBtn{
+    position: absolute;
+    font-family: 'Pretendard';
+    font-weight: 300;
+}
+
+.c5 h3{
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 380px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.c5 .loadBtn{
+
+    border: 1px solid #fff;
+    border-radius: 50px;
+
+    width: 180px;
+    position: absolute;
+    left: 50%; bottom: 50px;
+    transform: translateX(-50%);
+
+    line-height: 25px;
+    font-size: 14px;
+}
+
+.c5 .c5Wrap .bgPic{
+
+    width: 100%;
+    height: 360px;
+    
+
+    position: absolute;
+    bottom: 40px;
+    background-image: url(../img/artofthea9/mobile_model_fit.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.c5 .obj{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+
+    background-position: center;
+    background-size: cover;
+}
+
+.c5 .obj1{
+    background-image: url(../img/artofthea9/mobile_alexisjamet.png);
+    top: 280px; left: 10px;
+}
+
+.c5 .obj2{
+    background-image: url(../img/artofthea9/mobile_yohanna_flip.png);
+    right: 10px; top: 650px;
+}
+
+.c5 .obj3{
+    background-image: url(../img/artofthea9/mobile_manoncezero.png);
+    left: 10px; top: 790px;
+}
+
+.c5 .picGrad{
+    display: none;
+}
+
+
+/* FOOTER */
+
+footer{
+    height: 400px;
+    background-color: #efefef;
+}
+
+footer .fWrap{
+    height: 350px;
+}
+
+footer .fWrap .top{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .fWrap .top .btLogo img{
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+footer .fWrap .top .sns{
+    display: flex;
+    font-size: 22px;
+    margin-left: 20px;
+}
+
+footer .fWrap .top .sns i{
+    width: 30px;
+    line-height: 30px;
+    border: 1px solid #000;
+    border-radius: 100%;
+    text-align: center;
+    margin-right: 20px;
+
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+footer .fWrap .top .sns i:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+footer ul{
+    display: none;
+}
+
+footer .menu:first-child{
+    margin-top: 60px;    
+}
+
+footer .menu h3{
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    font-family: 'Pretendard';
+    color: #363636;
+
+    line-height: 40px;
+    padding-left: 20px;
+}
+
+footer .copy{
+    border-top: 1px solid #000;
+    padding-left: 20px;
+    font-family: 'Pretendard';
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 40px;
+}
+
+
+
+

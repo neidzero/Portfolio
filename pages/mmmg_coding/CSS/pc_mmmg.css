@@ -1,0 +1,823 @@
+@media all and (min-width:1200px){
+
+    /*LAYOUT
+    
+    max-width:1320px
+    width : 95%
+    marginleft-auto
+    marginright-auto
+    */
+
+    .mobileBtn{
+        display: none;
+    }
+
+    .pcBtn{
+        display: block;
+    }
+
+
+
+    /*header*/
+
+
+    header{
+        display: block;
+        position: fixed;
+        top: 0; left: 0;
+        z-index: 999;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    header .hWrap{
+        max-width: 1320px;
+        width: 95%;
+        margin-right: auto;
+        margin-left: auto;
+        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    header .hWrap .pcBtn{
+        border: 1px solid #000;
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        position: relative;
+        z-index: 999;
+    }
+
+    header .hWrap .pcBtn>div{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    header .hWrap .pcBtn .openBtn{
+        background-image: url(../img/button/openBtn.png);
+    }
+
+    header .hWrap .pcBtn .closeBtn{
+        background-image: url(../img/button/closeBtn.png);
+    }
+
+    header .hWrap .pcBtn>div.active{
+        display: block;
+    }
+
+    header .hWrap .pcBtn>div{
+        display: none;
+    }
+
+
+    header .hWrap .headerLogo{
+        width: 400px;
+        height: 40px;
+
+        background-image: url(../img/logo/logoPng.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    header .hWrap .headerMenu{
+        width: 100px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    header .hWrap .headerMenu li{
+        width: 40%;
+        
+        text-align: center;
+    }
+    header .hWrap .headerMenu li i{
+        font-size: 22px;
+        color: #000;
+    }
+
+
+    /*aside*/
+
+    aside{
+
+        z-index: 995;
+    
+        font-family: 'Pretendard';
+        
+        background-image: url(../img/background/headerBackground.jpg);
+        background-size: cover;
+        background-position: center;
+        
+        position: fixed;
+        top: 0;
+        left: -100%;
+        /*PCBTN click > left 0, -100%*/
+    
+        height: 100vh;
+        width: 300px;
+    }
+    
+    aside .headerLogo{
+        display: none;
+    }
+
+    aside .btMenu{
+        display: flex;
+        margin-top: 150px;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    aside .btMenu li{
+        width: 50%;
+        text-align: center;
+        font-size: 14px;
+        letter-spacing: 1px;
+        font-weight: 200;
+    }
+    
+    aside .tabBtn{
+        font-family: 'Pretendard';
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        margin-top: 20px;
+    }
+    
+    aside .tabBtn button{
+        background-color: transparent;
+        cursor: pointer;
+    
+        font-family: 'Pretendard';
+        width: 50%;
+        line-height: 40px;
+        font-size: 16px;
+        border: 0;
+        font-weight: 200;
+        letter-spacing: 2px;
+    }
+    
+    aside .tabBtn button.active{
+        background-color: #ed4d48;
+        color: #fff;
+        border: 1px solid #363636;
+    }
+
+    
+aside .tabMenu>ul{
+    border: 1px solid #363636;
+    
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
+
+aside .tabMenu>ul>li:first-child{
+    padding-top: 20px;
+}
+
+aside .tabMenu>ul>li>a{
+    border-top: 1px solid #363636;
+    position: relative;
+
+    display: block;
+    font-family: 'Pretendard';
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 10px;
+    color: #000;
+
+    transition: all 0.2s;
+}
+
+aside .tabMenu>ul>li>a::after{
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: #93cd82;
+    border-radius: 100%;
+    
+    position: absolute;
+    top: 50%;
+    right: 30%;
+    transform: translateY(-50%);
+
+    transition: all 0.2s;
+}
+
+aside .tabMenu>ul>li>a.active{
+    background-color: #ed4d48;
+    color: #fff;
+}
+
+aside .tabMenu>ul>li>a.active::after{
+    background-color: transparent;
+    border: 2px solid #93cd82;
+}
+
+/* SUBMENU */
+
+aside .tabMenu .subMenu{
+
+    display: none;
+
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 200;
+
+}
+
+aside .tabMenu .subMenu>li{
+    padding-left: 20px;
+}
+
+
+aside .tabMenu .subMenu>li:not(:last-child){
+    border-bottom: 1px solid #363636;
+}
+
+    /*C1*/
+    .c1{
+        height: 100vh;
+        width: 100%;
+        
+        background-image: unset;
+        background-image: url(../img/background/bodyBackground.jpg);
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+
+    }
+
+    .c1 .mobileImg{
+        display: none;
+    }
+
+    .c1 video{
+        max-width: 1280px;
+        height: 85vh;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        margin-top: 40px;
+    }
+
+    
+/* C2*/
+
+.c2{
+
+    position: relative;
+    height: 230vh;
+    background-image: url(../img/background/bodyBackground.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* C2MenuList */
+
+.c2 .menuList .mobileVer{
+    display: none;
+}
+
+.c2 .menuList .pcVer{
+    display: block;
+}
+
+
+.c2 .menu img{
+    
+    width: auto;
+    height: 100px;
+
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.c2 .menuList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    padding-top: 50px;
+
+    max-width: 1320px;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.c2 .menu{
+    display: unset;
+    flex-direction: unset;
+}
+
+.c2 .menu:not(:first-child){
+    margin-top: 100px;
+}
+
+
+.c2 .menu .obj{
+    margin-right: unset;
+    margin-left: unset;
+
+    background-size: cover;
+    background-position: center;
+}
+
+/*STAITONERY*/
+
+.c2 .menu1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.c2 .menu1 .obj{
+    width: 160px;
+    height: 30px;
+    background-image: url(../img/productpng/mobile/redPen.png);
+
+    /*animation-name: up; */
+    animation-duration: 1s; /*러닝타임*/
+    animation-delay: 0; /*시작하기 전까지 딜레이*/
+    animation-iteration-count: 1; /*한번만*/
+    animation-fill-mode: forwards; /*계속 지속*/
+}
+
+@keyframes up{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(-10px);}
+    100%{transform: translateY(0);}
+}
+
+/*LIVING*/
+
+
+.c2 .menu2{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.c2 .menu2 .obj{
+
+    margin-right: unset;
+    margin-left: unset;
+
+    background-size: cover;
+    background-position: center;
+
+    width: 80px;
+    height: 70px;
+
+    background-image: url(../img/productpng/mobile/creamCu.png);
+
+ /*animation-name: up; */
+ animation-duration: 1s; /*러닝타임*/
+ animation-delay: 0; /*시작하기 전까지 딜레이*/
+ animation-iteration-count: 1; /*한번만*/
+ animation-fill-mode: forwards; /*계속 지속*/
+    
+}
+
+/*FURNITURE*/
+
+.c2 .menu3{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+}
+
+.c2 .menu3 .obj{
+    /*animation-name: up; */
+ animation-duration: 1s; /*러닝타임*/
+ animation-delay: 0; /*시작하기 전까지 딜레이*/
+ animation-iteration-count: 1; /*한번만*/
+ animation-fill-mode: forwards; /*계속 지속*/
+}
+
+.c2 .menu3 .obj1{
+    width: 140px;
+    height: 100px;
+
+    background-image: url(../img/productpng/mobile/2person_sofa.png);
+}
+.c2 .menu3 .obj2{
+    display: unset;
+    height: auto;
+    width: 110px;
+    background-image: url(../img/productpng/furniture/sofa1person.png);
+}
+
+
+/* c2 Bottom : icons! */
+
+.c2 .bottomMenu{
+    z-index: 710;
+    position: relative;
+
+    max-width: 1320px;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 700px;
+    margin-top: 130px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.c2 .bottomMenu .box{
+    position: relative;
+}
+
+
+/* redPot */
+
+
+.c2 .bottomMenu .box:first-child{
+    height: fit-content;
+    border: 1px;
+}
+
+/*mouseover active class 체크하기~!*/
+
+.c2 .bottomMenu .box:first-child h5.active{
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    
+    line-height: 20px;
+    background-color: unset;
+    color: #fff;
+
+    position: absolute;
+    z-index: 10;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.c2 .bottomMenu .box:first-child h5{
+    display: none;
+}
+
+.c2 .bottomMenu .redPot{
+    height: 150px;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 9;
+}
+
+.c2 .bottomMenu .redPot.active{
+    transform: rotate(5deg);
+}
+
+/* silverpot  */
+
+.c2 .bottomMenu .box:nth-child(2){
+    height: 150px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: transparent;
+}
+
+.c2 .bottomMenu .box:nth-child(2).active{
+    background-color:transparent;
+    border: 1px solid #000;
+    border-radius: 100%;
+}
+
+.c2 .bottomMenu .silver{
+    width: fit-content;
+    height: 110px;
+    border: none;
+}
+
+.c2 .bottomMenu .box:nth-child(2) h5{
+    display: none;
+}
+
+.c2 .bottomMenu .box:nth-child(2) h5.active{
+    color: #363636;
+    font-size: 22px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    line-height: 100px;
+    display: block;
+}
+
+
+
+/* checkbooook */
+
+
+.c2 .bottomMenu .note{
+    height: 150px;
+    transform: rotate(0);
+}
+
+.c2 .bottomMenu .note.active{
+    transform: rotate(10deg);
+}
+
+.c2 .bottomMenu .box:nth-child(3) h5{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    line-height: 30px;
+    border: 1px solid black;
+    border-radius: 100%;
+
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #363636;
+    opacity: 0;
+
+    transition: opacity 0.2s;
+}
+
+.c2 .bottomMenu .box:nth-child(3) h5.active{
+    opacity: 1;
+}
+
+/* C2 checkbox */
+
+.c2 .checkbox{
+
+    position: absolute;
+    top: 65%; left: 50%;
+    transform: translate(-50%,-50%);
+   max-width: 1320px;
+   width: 30%;
+   height: 30%;
+
+
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/background/mobilBackground.png);
+    opacity: 0.7;
+
+    z-index: 700;
+}
+
+
+/*c3 - about*/
+
+.c3{
+    background-image: url(../img/background/bodyBackground.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 800px;
+}
+
+.c3 .c3Wrap{
+
+    max-width: 1280px;
+    width: 95%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+}
+
+.c3 .pcTxt{
+    display: block;
+    position: absolute;
+    top: 50%; right: 100px;
+    transform: translateY(-50%);
+}
+
+.c3 .mobileTxt{
+    display: none;
+}
+
+.c3 .logo{
+
+    width: 50%;
+    height: 50px;
+
+    margin-right: auto;
+    margin-left: unset;
+
+    margin-top: 150px;
+
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/logo/logoPng.png);
+}
+
+
+.c3 .pcTxt h5{
+
+    width: 400px;
+    margin-right: unset;
+    margin-left: unset;
+
+    font-family: 'Pretendard';
+    color: #000;
+    font-weight: 400;
+
+    font-size: 14px;
+    line-height: 18px;
+
+    margin-top: 40px;
+}
+
+
+/*c3_plant*/
+
+.c3 .plant{
+    padding-top: 150px;
+    display: flex;
+    align-items: last baseline;
+    justify-content:space-between ;
+    width: 50%;
+
+}
+
+.c3 .plant .pic{
+    background-size: cover;
+    background-position: center;
+}
+
+.c3 .plant .pic1,
+.c3 .plant .pic3{
+    display: block;
+}
+
+.c3 .plant .pic1{
+    width: 140px;
+    height: 180px;
+
+    background-image: url(../img/productpng/plant/GlassPot_1.png);
+}
+
+
+.c3 .plant .pic2{
+    margin-top: unset;
+    margin-right: unset;
+    margin-left: unset;
+
+    width: 200px;
+    height: 260px;
+
+    background-image: url(../img/productpng/plant/CreamPot_2.png);
+}
+
+.c3 .plant .pic3{
+
+    width: 220px;
+    height: 250px;
+
+    background-image: url(../img/productpng/plant/glassPot_3.png);
+
+}
+
+
+
+/*footer*/
+
+footer{
+    height: 200px;
+    width: 100%;
+
+    background-image: url(../img/background/bodyBackground.jpg);
+    background-size: cover;
+    background-position: center;
+
+    border-top: 1px dashed #000;
+
+    position: relative;
+}
+
+footer .fWrap{
+    max-width: 1320px;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+}
+
+footer .fWrap .essential{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: unset;
+}
+
+footer .fWrap .btLogo{
+    width: 50%;
+    height: 60px;
+
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/logo/logoPng.png);
+}
+
+footer .fWrap .sns{
+    width: 35px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 35%;
+    text-align: center;
+    line-height: 35px;
+    font-size: 24px;
+
+    transition: all 0.2s;
+}
+
+footer .fWrap .sns.active{
+    background-color: #000;
+    color: #fff;
+}
+
+footer .fWrap .company{
+    display: block;
+    font-weight: 300;
+    border-left: 1px dashed #363636;
+    padding-left: 20px;
+    font-size: 12px;
+}
+
+footer .fWrap .brushicon{
+    display: block;
+
+    width: 100px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/productpng/stationary/brush.png);
+}
+
+footer .copy{
+    position: absolute;
+   bottom: 10%;
+    width: 20%;
+  
+    font-weight: 200;
+    padding-left: 20px;
+}
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

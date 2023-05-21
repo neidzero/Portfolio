@@ -1,0 +1,1912 @@
+
+@media all and (min-width:1200px){
+
+aside{
+    display: none;
+}
+
+.asideBtn{
+    display: none;
+}
+
+/* HEADER */
+
+header{
+    display: block;
+
+    width: 100%;
+    position: fixed;
+    top: 0;
+
+    z-index: 999;
+    user-select: none;
+}
+
+header .hWrap{
+    width: 1420px;
+    margin: 0 auto;
+    display: flex;
+}
+
+header .logo{
+
+   
+
+    cursor: pointer;
+    line-height: 50px;
+    width: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20px;
+    font-family: 'Prata', serif;
+    letter-spacing: 2px;
+    color: #385a62;
+}
+
+header .gnb{
+    display: flex;
+    line-height: 50px;
+    font-family: 'Prata', serif;
+    color:  #385a62;
+
+    margin-left: auto;
+}
+
+header .gnb li{
+    width: 200px;
+    text-align: center;
+    font-size: 20px;
+}
+
+header .gnb li button{
+
+    cursor: pointer;
+
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    
+    border-radius: 20px;
+    border: 1px solid #385a62;
+    background-color: #a3c5c7;
+    color: #385a62;
+
+    transition: all 0.2s;
+}
+
+header .gnb li button:hover{
+    background-color: #385a62;
+    color:#ebebeb;
+}
+
+
+/* C1 - MAIN */
+
+.c1{
+    user-select: none;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+    background-image: url(../img/background/background_grain.jpg);
+    background-size: cover;
+    background-position: center;
+
+    border-bottom: 1px solid #a3c5c7;
+}
+
+
+.square{
+    top: 160px;
+    left: 50%; 
+    transform: translateX(-50%);
+
+    width: 450px;
+    height: 450px;
+    position: relative;
+}
+
+.square span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #a3c5c7;
+    border-radius: 40% 60% 65% 35% / 40% 45% 55% 60% ;
+    transition: 0.5s;
+}
+
+.square span:nth-child(1){
+    animation: circle 6s linear infinite;
+}
+.square span:nth-child(2){
+    animation: circle 4s linear infinite;
+    animation-direction: reverse;
+}
+.square span:nth-child(3){
+    animation: circle 10s linear infinite;
+}
+
+@keyframes circle{
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+}
+
+.square div{
+    position: absolute;
+    top: 50%; left: 50%; 
+
+    width: 100%;
+
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #385a62;
+}
+
+.square div h2{
+    font-size: 36px;
+    font-family: 'Prata', serif;
+    font-weight: 100;
+}
+
+/* C1 TXT */
+
+.c1 .c1_txt{
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100px;
+
+    font-family: 'Prata', serif;
+    letter-spacing: 1px;
+    color: #385a62;
+    text-align: center;
+}
+
+.c1 .c1_txt h3{
+    font-weight: 100;
+    font-size: 22px;
+    line-height: 50px;
+
+}
+.c1 .c1_txt h1{
+    font-weight: 100;
+    font-size: 60px;
+}
+
+/* C2_About Me */
+
+.c2 .clickBox{
+    display: none;
+}
+
+.c2{
+    user-select: none;
+    width: 100%;
+    min-height: 800px;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    
+    background-image: url(../img/background/background_grain.jpg);
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+    z-index: 100;
+}
+
+.c2 .c2Wrap{
+    max-width: 1320px;
+    width: 95%;
+
+    height: 80vh;
+
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* C2 TOP : profile, intro, info */
+
+.c2_top{
+
+    height: 260px;
+   width: 100%;
+
+    display: flex;
+    align-items: center;
+ 
+    position: relative;
+}
+
+.c2_top .profile{
+    width: 220px;
+    height: 220px;
+    border: 1px solid #a3c5c7;
+    border-radius: 100%;
+
+    position: relative;
+}
+
+.c2_top .profile .circle{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+
+    width: 200px; height: 200px;
+    border: 1px solid #a3c5c7;
+   
+    border-radius: 100%;
+}
+
+.c2_top .profile .pic{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+
+    width: 180px; height: 180px;
+    border-radius: 100%;
+
+    background-image: url(../img/aboutme/profile_200.jpg);
+    background-size: cover;
+}
+
+/* INTRODUCE */
+
+.c2_top .introduce{
+    position: unset;
+
+    width: 700px;
+    height: 190px;
+    margin-left: 20px;
+
+    border: 1px solid rgba(56, 90, 98, 0.8);
+    border-radius: 150px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-family: 'Pretendard';
+}
+
+.c2_top .introduce div{
+    margin-left: 50px;
+}
+
+.c2_top .introduce .title{
+   width: 500px;
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 60px;
+}
+.c2_top .introduce .descript{
+    font-family: 'Pretendard';
+
+    width: 680px;
+
+    margin-left: 50px;
+
+    font-weight: 500;
+    color: #747373;
+    font-size: 14px;
+    line-height: 18px;
+}
+.c2_top .introduce .descript br{
+    display: block;
+}
+
+.c2_top .introduce .descript span{
+    color: #2b3232;
+    font-weight: 700;
+}
+/* INFO */
+
+.c2_top .info{
+    margin-left: 60px;
+    height: 160px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.c2_top .info .name{
+    font-family: 'Pretendard';
+    line-height: 80px;
+
+    
+    font-weight: 400;
+    color: #2b3232;
+
+    font-size: 26px;
+    text-align: center;
+}
+
+.c2_top .info .job{
+    font-family: 'Prata', serif;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.c2_top .info .birth{
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-size: 16px;
+    color: #385a62;
+    text-align: right;
+}
+
+/* C2 MIDDLE , C2 BOTTOM SETTING
+여기부터~!~!~!~!~!~!~!~!~!~! */
+
+.c2_middle{
+    margin-top: 20px;
+}
+
+.c2_bottom{
+    margin-top: 30px;
+
+}
+
+.c2_middle .contact{
+    display: block;
+         /*완료*/
+font-family: 'Pretendard';
+}
+
+.c2_middle, .c2_bottom{
+
+    height: 400px;
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /*완료*/
+}
+
+
+.c2_middle .title, .c2_bottom .title{
+    display: unset;
+    border-bottom: 0;
+}
+
+
+.c2_middle .contents,
+.c2_bottom .contents{
+    display: block;
+}
+
+
+.c2_middle h3, .c2_bottom h3{
+    font-family: 'Prata', serif;
+    font-size: 32px;
+    font-weight: 100;
+
+    color: #2b3232;
+    line-height: 56px;
+}
+
+.c2_middle h5, .c2_bottom h5{
+    font-family: 'Pretendard';
+    font-weight: 700;
+  
+    font-size: 15px;
+    color: #2b3232;
+    line-height: 14px;
+}
+
+
+.c2_middle .contact .youtube{
+    display: block;
+    font-family: 'Pretendard-Regular';
+    color: #747373;
+    font-weight: 100;
+    background-color: transparent;
+    border: 1px solid #747373;
+    font-size: 15px;
+    width: 200px;
+    border-radius: 35px;
+    line-height: 40px;
+    transition: all 0.2s;
+}
+
+.c2_middle .contact .youtube:hover{
+    border: 1px solid #385a62;
+    color: #385a62;
+    background-color: rgba(163, 197, 199, 0.8);
+}
+
+/*check 완*/
+
+
+.c2_middle .detail, .c2_bottom .detail{
+    border-bottom: 0;
+      /*완료*/
+}
+
+.c2_bottom .exper .detail{
+    font-family: 'Pretendard';
+    border-top: 0; 
+    font-size: 1px;
+   
+}
+
+.c2_bottom .detail, .c2_middle .detail{
+    color: #747373;
+    font-weight: 400;
+}
+
+.c2_bottom .detail span, .c2_middle .detail span{
+    color: #2b3232;
+    font-weight: 400;
+      /*완료*/
+}
+
+.c2_middle .box, .c2_bottom .box{
+    margin: 30px 0;
+      /*완료*/
+}
+
+.c2_middle .contact, .c2_bottom .blank{
+    width: 200px;
+}
+
+.c2_middle .education, .c2_bottom .exper{
+    width: 430px;
+}
+
+.c2_middle .award, .c2_bottom .certif{
+    width: 330px;
+}
+
+.c2_bottom .exper .date{
+    color: #747373;
+    font-weight: 400;
+     /*완료*/
+}
+
+.c2_bottom .exper .ex{
+    line-height: 18px;
+    border-top: 0;
+     /*완료*/
+}
+
+.c2_bottom .exper .detail{
+    font-family: 'Pretendard';
+
+    font-size: 14px;
+    margin-top: 12px;
+    padding-left: 30px;
+    line-height: 14px;
+    font-weight: 400;
+     /*완료*/
+}
+
+.c2_bottom .exper .detail li{
+    list-style-type: circle;
+     /*완료*/
+}
+
+.c2_bottom .certif{
+    position: relative;
+     /*완료*/
+}
+
+.c2_bottom .certif h5{
+    width: 300px;
+    border: 1px solid #96b3b4;
+    color: #747373;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 50px;
+    padding-left: 30px;
+    border-radius: 50px;
+         /*완료*/
+}
+
+.c2_bottom .certif .certifss{
+    margin-top: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 180px;
+
+    position: absolute;
+    top: 160px; left: 50%;
+    transform: translate(-50%,-50%);
+         /*완료*/
+}
+
+/* C3 : SKILLS */
+
+.c3{
+    user-select: none;
+    width: 100%;
+    height: 100vh;
+    
+    background-image: url(../img/background/background_grain.jpg);
+    background-position: center;
+    background-size: cover;
+
+    box-sizing: border-box;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.c3 .c3Wrap{
+    max-width: 1320px;
+    width: 95%;
+    
+    margin: 0 auto;
+
+    position: relative;
+    display: flex;
+    
+    align-items: center;
+    justify-content: unset;
+}
+
+/* SOFTWARE */
+
+.c3 .wrapper{
+    width: 30%;
+}
+
+.c3 .container{
+    width: 90%;
+    margin-left: 20px;
+    
+    background-color: transparent;
+}
+
+.c3 .container h3{
+    line-height: 50px;
+    text-align: left;
+    font-size: 44px;
+    font-weight: 100;
+    margin-bottom: 20px;
+    font-family: 'Prata', serif;
+    color: #2b3232;
+}
+
+
+.c3 .container .skills:not(:last-child){
+    margin-bottom: 30px;
+}
+
+.c3 .container .skills .details{
+    width: 100%;
+    font-family: 'Pretendard-Regular';
+    color: #385a62;
+    font-size: 18px;
+}
+
+/* BAR */
+
+.c3 .container .skills .bar{
+    position: relative;
+    border: 1px solid   #747373;
+    border-radius: 20px;
+}
+
+.c3 .container .skills .bar div{
+    position: relative;
+    width: 0;
+    height: 9px;
+    border-radius: 10px;
+    background-color: #a3c5c7;
+}
+
+/* PSDBAR */
+.c3 .psdBar{
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.c3 .container.active .psdBar{
+    animation-name: psd-fill;
+}
+
+@keyframes psd-fill{
+    100%{width: 85%;}
+}
+
+/* AIBAR */
+.c3 .aiBar{
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.c3 .container.active .aiBar{
+    animation-name: ai-fill;
+}
+
+@keyframes ai-fill{
+    100%{width: 85%;}
+}
+/* PREMIEREBAR */
+.c3 .videoBar{
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.c3 .container.active .videoBar{
+    animation-name: video-fill;
+}
+
+@keyframes video-fill{
+    100%{width: 95%;}
+}
+/* AFTEREFFECTBAR */
+.c3 .aeBar{
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.c3 .container.active .aeBar{
+    animation-name: ae-fill;
+}
+
+@keyframes ae-fill{
+    100%{width: 75%;}
+}
+
+
+/* WEB */
+
+.c3 .container .skills:not(:last-child){
+    margin-bottom: 30px;
+}
+
+
+.c3 .container .skills .bar{
+    position: relative;
+    border: 1px solid   #747373;
+    border-radius: 20px;
+}
+
+.c3 .web .container .skills .bar div{
+    position: relative;
+    width: 0;
+    height: 9px;
+    border-radius: 10px;
+    background-color:  #385a62;
+}
+
+/* HTMLBAR */
+.c3 .htmlBar{
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.c3 .container.active .htmlBar{
+    animation-name: html-fill;
+}
+
+
+@keyframes html-fill{
+    100%{width: 90%;}
+}
+
+/* CSSBAR */
+.c3 .cssBar{
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.c3 .container.active .cssBar{
+    animation-name: css-fill;
+}
+
+@keyframes css-fill{
+    100%{width: 85%;}
+}
+/* JSBAR */
+.c3 .jsBar{
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.c3 .container.active .jsBar{
+    animation-name: js-fill;
+}
+
+@keyframes js-fill{
+    100%{width: 80%;}
+}
+
+/* C3Txt */
+
+.c3 .c3Wrap .c3Txt{
+    position: unset;
+
+    width: 50%;
+    font-family: 'Prata', serif;
+    text-align: center;
+    margin-top: 80px;
+    margin-left: unset;
+    color: #385a62;
+}
+
+.c3 .c3Wrap .c3Txt h3{
+    font-size: 24px;
+    font-weight: 100;
+}
+.c3 .c3Wrap .c3Txt h1{
+    font-weight: 100;
+    font-size: 64px;
+}
+
+
+/* C4 : INDEX!!!!! 
+여기서부터고치면됨~!~!~!!~!*/
+
+
+.c4{
+    user-select: none;
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(../img/background/background_grain.jpg);
+    background-size: cover;
+    background-position: center;
+
+    border-top: 1px solid  #a3c5c7;
+
+    position: relative;
+}
+
+.c4 .borderTxt{
+    color: #385a62;
+    font-family: 'Prata', serif;
+    font-weight: 100;
+    font-size: 22px;
+    position: absolute;
+    left: 50%; top: 0;
+     transform: translate(-50%,-50%);
+}
+
+.c4 .c4Wrap{
+    max-width: 1320px;
+    width: 95%;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*완료*/
+
+
+/* C4 Txt */
+
+.c4 .c4Wrap .c4Txt{
+
+    position: absolute;
+    top: 200px;
+    left: 60px;
+
+    color: #385a62;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    width: 300px;
+    height: 130px;
+    /*완료*/
+}
+
+.c4 .c4Wrap .c4Txt .c4Title{
+    font-family: 'Prata', serif;
+    font-weight: 100;
+    font-size: 60px;
+    line-height: 80px;
+
+    width: 200px;
+    text-align: center;
+    /*완료*/
+
+}
+.c4 .c4Wrap .c4Txt .c4SubTitle{
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: italic;
+    font-size: 18px;
+    /*완료*/
+}
+
+/* C4 Con */
+
+.c4 .c4Wrap .c4Con{
+
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 350px;
+    left: 40px;
+}
+
+.c4 .c4Wrap .c4Con .index{
+    display: flex;
+    align-items: unset;
+
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-style: italic;
+
+    line-height: 45px;
+    /*완료*/
+}
+
+.c4 .c4Wrap .c4Con .index .num{
+    color:  #a3c5c7;
+    font-size: 18px;
+    width: 50px;
+    letter-spacing: 0px;
+    text-align: center;
+}
+.c4 .c4Wrap .c4Con .index .page{
+    color: #385a62;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0px;
+}
+.c4 .c4Wrap .c4Con .index .category{
+    color: #385a62;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+    line-height: 48px;
+}
+
+
+/* PROJECT NAVIGATION */
+
+.navi{
+    display: block;
+
+    user-select: none;
+    color: #fff;
+
+    position: fixed;
+    right: 100px;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 999;
+
+    transition: all 0.3s;
+}
+
+.navi .navBtn{
+    position: relative;
+}
+
+.navi span{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 100%;
+
+    transition: all 0.2s;
+}
+
+.navi span.active{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.navi .navTxt{
+
+    position: absolute;
+    margin-right: 30px;
+    width: 180px;
+    height: 20px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    overflow: hidden;
+}
+
+.navi h5{
+
+    position: absolute;
+
+    right: -100%;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-family: 'Pretendard-Regular';
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.navBtn.active span{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.navBtn.active h5{
+    right: 0;
+}
+
+
+/* C5 AESOP */
+
+.c5 .caution,
+.c6 .caution{
+    display: none;
+}
+
+.c5{
+    user-select: none;
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(../img/project/aesop/forest_dark2.jpeg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: -200px;
+}
+
+.c5 .proWrap{
+    max-width: 1320px;
+    width: 95%;
+
+    height: 100vh;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* LEFT : TXT */
+
+.c5 .proWrap .left{
+
+    color: #fff;
+    width: 45%;
+    height: 600px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.c5 .proWrap .left .projectTitle{
+    display: flex;
+    font-family: 'Pretendard';
+    
+    font-size: 20px;
+    line-height: 45px;
+    letter-spacing: 0px;
+
+    margin-top: 80px;
+    margin-left: 70px;
+}
+
+.c5 .proWrap .left .projectTitle .num{
+    font-style: italic;
+    width: 45px;
+}
+
+.c5 .proWrap .left .category{
+    margin-top: 20px;
+    margin-left: 70px;
+  
+    width: fit-content;
+    line-height: 40px;
+
+    border: 1px solid #fff;
+    border-radius: 50px;
+
+    font-family: 'Pretendard';
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+     
+    
+}
+
+.c5 .proWrap .left .descript{
+
+    margin-left: 70px;
+    font-family: 'Pretendard';
+   font-weight: 100;
+    font-size: 18px;
+
+    margin-top: 100px;
+
+}
+
+/* RIGHT : MOCKUP */
+
+.c5 .proWrap .right{
+    margin-top: 0;
+    width: 55%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.c5 .proWrap .right a{
+    border: 2px solid white;
+    z-index: 800;
+
+
+    color: #fff;
+    width: 250px;
+    text-align: center;
+    line-height: 35px;
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 2px;
+    border-radius: 75px;
+
+    transition: all 0.2s;
+    
+}
+
+.c5 .proWrap .right a.active{
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #363636;
+    border: 0;
+}
+
+.c5 .proWrap .right .mockup{
+    width: 600px;
+    height: 400px;
+
+    background-image: url(../img/project/aesop/aseop_pc_mockup.png);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+
+}
+
+ /*이까지완료*/
+
+/* C6 LOUISPOULSEN */
+
+.c6{
+    user-select: none;
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(../img/project/louispoulsen/Louis_Poulsen_PH_Septima_4.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: -250px;
+}
+
+.c6 .proWrap{
+    max-width: 1320px;
+    width: 95%;
+
+    height: 100vh;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* LEFT : TXT */
+
+.c6 .proWrap .left{
+
+    color: #fff;
+    width: 45%;
+    height: 600px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.c6 .proWrap .left .projectTitle{
+    display: flex;
+    font-family: 'Pretendard';
+    
+    font-size: 20px;
+    line-height: 45px;
+    letter-spacing: 0px;
+
+    margin-top: 80px;
+    margin-left: 70px;
+}
+
+.c6 .proWrap .left .projectTitle .num{
+    font-style: italic;
+    width: 45px;
+}
+
+.c6 .proWrap .left .category{
+    margin-top: 20px;
+    margin-left: 70px;
+  
+    width: fit-content;
+    line-height: 40px;
+
+    border: 1px solid #fff;
+    border-radius: 50px;
+
+    font-family: 'Pretendard';
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+    
+}
+
+.c6 .proWrap .left .descript{
+    margin-left: 70px;
+    font-family: 'Pretendard';
+   font-weight: 100;
+    font-size: 18px;
+
+    margin-top: 100px;
+}
+
+/* RIGHT : MOCKUP */
+
+.c6 .proWrap .right{
+    margin-top: 0;
+    width: 55%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.c6 .proWrap .right a{
+    border: 2px solid white;
+    z-index: 800;
+
+
+    color: #fff;
+    width: 250px;
+    text-align: center;
+    line-height: 35px;
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 2px;
+    border-radius: 75px;
+
+    transition: all 0.2s;
+}
+
+.c6 .proWrap .right a.active{
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #363636;
+    border: 0;
+}
+
+
+.c6 .proWrap .right .mockup{
+
+    width: 600px;
+    height: 400px;
+
+  background-image: url(../img/project/louispoulsen/louispoulsen_pc_mokup.png);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+/* 여기까지 완 */
+
+
+/* C7 REACT BANGNOLUFSEN */
+
+.c7{
+    user-select: none;
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(../img/project/react/blackBg.png);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.c7 .proWrap{
+    max-width: 1320px;
+    width: 95%;
+    height: 100vh;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* LEFT : TXT */
+
+.c7 .proWrap .left{
+
+    color: #fff;
+    width: 45%;
+    height: 600px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.c7 .proWrap .left .projectTitle{
+    display: flex;
+    font-family: 'Pretendard';
+    
+    font-size: 20px;
+    line-height: 45px;
+    letter-spacing: 0px;
+
+    margin-top: 80px;
+    margin-left: 70px;
+}
+
+.c7 .proWrap .left .projectTitle .num{
+    font-style: italic;
+    width: 45px;
+}
+
+.c7 .proWrap .left .category{
+    margin-top: 20px;
+    margin-left: 70px;
+  
+    width: fit-content;
+    line-height: 40px;
+
+    border: 1px solid #fff;
+    border-radius: 50px;
+
+    font-family: 'Pretendard';
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+    
+}
+
+.c7 .proWrap .left .descript{
+    margin-left: 70px;
+    font-family: 'Pretendard';
+   font-weight: 100;
+    font-size: 18px;
+    margin-top: 100px;
+}
+
+/* RIGHT : MOCKUP */
+
+.c7 .proWrap .right{
+    margin-top: 0;
+    width: 55%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.c7 .proWrap .right a{
+    border: 2px solid white;
+    z-index: 800;
+
+
+    color: #fff;
+    width: 250px;
+    text-align: center;
+    line-height: 35px;
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 2px;
+    border-radius: 75px;
+
+    transition: all 0.2s;
+}
+
+.c7 .proWrap .right a.active{
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #363636;
+    border: 0;
+}
+
+.c7 .proWrap .right .mockup_react{
+    display: flex;
+    align-items: center;
+}
+
+.c7 .proWrap .right .mockup{
+
+    width: 450px;
+    height: 350px;
+
+   background-image: url(../img/project/react/bno_pc_mokup.png);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+
+    
+}
+
+.c7 .proWrap .right .mockupMobile{
+    width: 200px;
+    height: 350px;
+
+    overflow: hidden;
+    
+    background-size: cover;
+    background-position: center;
+   background-image: url(../img/project/react/bno_mobile_mokup.png);
+}
+
+
+
+/* C7_2 REACT MMMg */
+
+.c7_2{
+    user-select: none;
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(../img/project/mmmg/background.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.c7_2 .proWrap{
+    max-width: 1320px;
+    width: 95%;
+    height: 100vh;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* LEFT : TXT */
+
+.c7_2 .proWrap .left{
+
+    color: #fff;
+    width: 45%;
+    height: 600px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.c7_2 .proWrap .left .projectTitle{
+    display: flex;
+    font-family: 'Pretendard';
+    
+    font-size: 20px;
+    line-height: 45px;
+    letter-spacing: 0px;
+
+    margin-top: 80px;
+    margin-left: 70px;
+}
+
+.c7_2 .proWrap .left .projectTitle .num{
+    font-style: italic;
+    width: 45px;
+}
+
+.c7_2 .proWrap .left .category{
+    margin-top: 20px;
+    margin-left: 70px;
+  
+    width: fit-content;
+    line-height: 40px;
+
+    border: 1px solid #fff;
+    border-radius: 50px;
+
+    font-family: 'Pretendard';
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.c7_2 .proWrap .left .descript{
+    margin-left: 70px;
+    font-family: 'Pretendard';
+   font-weight: 100;
+    font-size: 18px;
+    margin-top: 100px;
+}
+
+/* RIGHT : MOCKUP */
+
+.c7_2 .proWrap .right{
+    margin-top: 0;
+    width: 55%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.c7_2 .proWrap .right a{
+    border: 2px solid white;
+    z-index: 800;
+
+
+    color: #fff;
+    width: 250px;
+    text-align: center;
+    line-height: 35px;
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 2px;
+    border-radius: 75px;
+
+    transition: all 0.2s;
+}
+
+.c7_2 .proWrap .right a.active{
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #363636;
+    border: 0;
+}
+
+.c7_2 .proWrap .right .mockup_react{
+    display: flex;
+    align-items: center;
+}
+
+.c7_2 .proWrap .right .mockup{
+
+    width: 450px;
+    height: 350px;
+
+   background-image: url(../img/project/mmmg/mmmg_pc_mokup.png);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.c7_2 .proWrap .right .mockupMobile{
+    width: 200px;
+    height: 350px;
+
+    overflow: hidden;
+    
+    background-size: cover;
+    background-position: center;
+   background-image: url(../img/project/mmmg/mmmg_mobile_mokup.png);
+}
+
+
+/* C7_3 WEBAPP 여기서부터 */
+
+
+.c7_3{
+    user-select: none;
+    width: 100%;
+    height: 100vh;
+   background-image: url(../img/project/webapp/background.jpg);
+   background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.c7_3 .proWrap{
+    max-width: 1320px;
+    width: 95%;
+    height: 100vh;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* LEFT : TXT */
+
+.c7_3 .proWrap .left{
+    color: #fff;
+    width: 45%;
+    height: 600px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.c7_3 .proWrap .left .projectTitle{
+    display: flex;
+    font-family: 'Pretendard';
+    
+    font-size: 20px;
+    line-height: 45px;
+    letter-spacing: 0px;
+
+    margin-top: 80px;
+    margin-left: 70px;
+}
+
+.c7_3 .proWrap .left .projectTitle .num{
+    font-style: italic;
+    width: 45px;
+}
+
+.c7_3 .proWrap .left .category{
+    margin-top: 20px;
+    margin-left: 70px;
+  
+    width: fit-content;
+    line-height: 40px;
+
+    border: 1px solid #fff;
+    border-radius: 50px;
+
+    font-family: 'Pretendard';
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.c7_3 .proWrap .left .descript{
+    margin-left: 70px;
+    font-family: 'Pretendard';
+   font-weight: 100;
+    font-size: 18px;
+    margin-top: 100px;
+}
+
+/* RIGHT : MOCKUP */
+
+.c7_3 .proWrap .right{
+    margin-top: 0;
+    width: 55%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.c7_3 .proWrap .right a{
+    border: 2px solid white;
+    z-index: 800;
+
+
+    color: #fff;
+    width: 250px;
+    text-align: center;
+    line-height: 35px;
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 2px;
+    border-radius: 75px;
+
+    transition: all 0.2s;
+}
+
+.c7_3 .proWrap .right a.active{
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #363636;
+    border: 0;
+}
+
+.c7_3 .proWrap .right .mockup_react{
+    display: flex;
+    align-items: center;
+}
+
+.c7_3 .proWrap .right .mockup{
+
+    width: 450px;
+    height: 350px;
+
+   background-image: url(../img/project/webapp/artgallery_pc_mokup.png);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+
+    
+}
+
+.c7_3 .proWrap .right .mockupMobile{
+    width: 200px;
+    height: 350px;
+
+    overflow: hidden;
+    
+    background-size: cover;
+    background-position: center;
+   background-image: url(../img/project/webapp/argalerry_mobile_mokup.png);
+}
+
+
+
+/* C8-GALLERY */
+
+.c8{
+    user-select: none;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    background-image: url(../img/background/background_grain.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.c8 .c8Wrap{
+    max-width: 1320px;
+    width: 95%;
+    height: 90vh;
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.c8 .c8Wrap .c8Title{
+    display: none;
+}
+
+.c8 .c8Wrap .top{
+    width: 100%;
+    height: 40vh;
+
+    display: flex;
+    align-items: unset;
+    justify-content: space-between;
+}
+
+.c8 .c8Wrap .bottom{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: unset;
+    justify-content: space-between;
+}
+
+.c8 .c8Wrap .box{
+    width: 400px;
+    height: 100%;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s;
+    position: relative;
+}
+
+.c8 .c8Wrap .box:hover{
+    opacity: 0.8;
+}
+
+.c8 .c8Wrap .box1{
+    background-image: url(../img/project/gallery/pink.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.c8 .c8Wrap .box2{
+    background-image: url(../img/project/gallery/graduation_shoes.png);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+.c8 .c8Wrap .box3{
+    background-image: url(../img/project/gallery/GamMeIN_brown.png);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.c8 .c8Wrap .box4{
+    background-image: url(../img/project/gallery/ILLUST_KOPC.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.c8 .c8Wrap .box5{
+    background-image: url(../img/project/gallery/1000breakfast.png);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.c8 .c8Wrap .box6{
+    background-image: url(../img/project/gallery/CCC_black.png);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.c8 .c8Wrap a{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+.c8 .viewImg{
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    top: 0;
+    left: 0;
+}
+
+.c8 .viewImg img{
+    width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* C9 : Contact! */
+
+.c9{
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(../img/background/background_grain.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.c9 .c9Wrap{
+    max-width: 1320px;
+    width: 95%;    
+    margin-top: 200px;
+    margin-right: auto;
+    margin-left: auto;
+
+    position: unset;
+}
+
+.c9 .c9Wrap h1{
+    font-family: 'Prata', serif;
+    font-weight: 100;
+    color: #385a62;
+    font-size: 56px;
+}
+
+.c9 .c9Wrap .c9Title{
+    position: absolute;
+    top: 100px;
+    left: 160px;
+}
+
+.c9 .c9Wrap .box{
+
+    position: absolute;
+
+    bottom: -500px; left: 50%;
+    transform: translateX(-50%);
+   width: 85%;
+    border: 1px solid #a3c5c7;
+    border-radius: 75px;
+    height: 1100px;
+}
+
+.c9 .c9Wrap .box>div{
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    line-height: 40px;
+    align-items: center;
+
+    border-bottom: 1px solid #a3c5c7;
+}
+
+.c9 .c9Wrap .box>div:first-child{
+    margin-top: 100px;
+}
+
+.c9 .c9Wrap .box>div:not(:first-child){
+    margin-top: 30px;
+}
+
+
+.c9 .c9Wrap .box>div .title{
+    font-family: 'Prata', serif;
+    font-weight: 100;
+    color: #385a62;
+    font-size: 22px;
+
+    width: 100px;
+    margin-left: 30px;
+    text-align: center;
+
+}
+.c9 .c9Wrap .box>div .detail{
+    font-family: 'Pretendard';
+    font-weight: 300;
+    color:  #747373;
+    font-size: 20px;
+}
+
+.c9 .c9Wrap .box h1{
+    text-align: right;
+    line-height: 120px;
+    padding-right: 60px;
+    font-size: 56px;
+}
+
+}

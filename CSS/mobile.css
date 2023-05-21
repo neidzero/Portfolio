@@ -1,0 +1,2053 @@
+/*mobile Style*/
+
+header{
+    display: none;
+}
+
+
+.asideBtn{
+    z-index: 998;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+
+    background-color: transparent;
+    border-radius: 100%;
+    border: 1px solid #385a62;
+
+    color: #617475;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/*aside*/
+
+aside{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 999;
+
+    width: 100%;
+    height: 100vh;
+
+    /* background-color: #a3c5c7; */
+    background-color: rgba(163, 197, 199, 0.9);
+    backdrop-filter: blur(2px);
+}
+
+aside .asideTop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 100px;
+
+    border-bottom: 1px solid #617475;
+}
+
+aside .asideTop h1{
+
+    padding-left: 20px;
+    font-family: 'Pretendard';
+    font-weight: 100;
+    color: #617475;
+    font-size: 44px;
+}
+
+aside .asideTop button{
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+
+    background-color: transparent;
+    border-radius: 100%;
+    border: 1px solid #385a62;
+
+    color: #617475;
+}
+
+aside .asideMenu{
+    width: 95%;
+    margin-left: 10px;
+    margin-top: 50px;
+}
+
+aside .asideMenu .topMenu{
+    width: 100%;
+    font-size: 36px;
+    line-height: 72px;
+}
+
+aside .asideMenu .topMenu h1{
+    color: #222;
+    font-family: 'Pretendard';
+    font-weight: 100;
+
+}
+
+aside .asideMenu .topMenu button{
+    width: 50px;
+    height: 50px;
+    line-height: 72px;
+    margin-left: auto;
+
+    background-color: transparent;
+    border-radius: 100%;
+    border: 1px solid #385a62;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+aside .asideMenu .topMenu button i{
+    font-size: 28px;
+    color: #385a62;
+
+    transition: transform 0.2s ease-in-out;
+}
+
+aside .asideMenu .topMenu .contactBtn.active{
+    background-color: #385a62;
+    color: #a3c5c7;
+}
+
+aside .asideMenu .topMenu .contactBtn.active i{
+    transform: rotate(180deg);
+    color: #a3c5c7;
+}
+
+aside .asideMenu .topMenu>li>a{
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #617475;
+}
+
+/*subMenu*/
+
+aside .asideMenu .topMenu .subMenu>li>a{
+    display: flex;
+    align-items: center;
+}
+
+aside .asideMenu .topMenu .subMenu{
+
+    display: none;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    border-right: 1px solid #617475;
+    border-left: 1px solid #617475;
+    border-bottom: 1px solid #617475;
+}
+
+aside .asideMenu .topMenu .subMenu h3{
+    font-size: 18px;
+    line-height: 36px;
+    font-family: 'Pretendard';
+    font-weight: 200;
+    color:#385a62;
+    margin-left: 10px;
+}
+
+aside .asideMenu .topMenu .subMenu button{
+    width: 30px;
+    height: 30px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #385a62;
+    background-color: transparent;
+    margin-left: 10px;
+}
+
+aside .asideMenu .topMenu .subMenu button i{
+    font-size: 18px;
+    color: #385a62;
+}
+
+
+
+/*c1_main*/
+
+.c1{
+    user-select: none;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    background-image: url(../img/background/background_grain.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.square{
+
+
+    top: 160px;
+    left: 50%; 
+    transform: translateX(-50%);
+
+    width: 250px;
+    height: 350px;
+    position: relative;
+}
+
+.square span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #a3c5c7;
+    border-radius: 40% 60% 65% 35% / 40% 45% 55% 60% ;
+    transition: 0.5s;
+}
+
+.square span:nth-child(1){
+    animation: circle 6s linear infinite;
+}
+.square span:nth-child(2){
+    animation: circle 4s linear infinite;
+    animation-direction: reverse;
+}
+.square span:nth-child(3){
+    animation: circle 10s linear infinite;
+}
+
+@keyframes circle{
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+}
+
+.square div{
+
+    position: absolute;
+    top: 50%; left: 50%; 
+
+    width: 100%;
+
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #385a62;
+}
+
+.square div h2{
+    font-size: 28px;
+    font-family: 'Prata', serif;
+    font-weight: 100;
+}
+
+
+/* C1 TXT */
+
+.c1 .c1_txt{
+
+    width: 90%;
+
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 60px;
+
+    font-family: 'Prata', serif;
+    letter-spacing: 0px;
+    color: #385a62;
+    text-align: center;
+}
+
+.c1 .c1_txt h3{
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 36px;
+}
+.c1 .c1_txt h1{
+    font-weight: 100;
+    font-size: 44px;
+}
+
+
+
+/* C2_About Me */
+
+.c2{
+    user-select: none;
+    width: 100%;
+
+
+    /* display: flex;
+    align-items: center; */
+    
+    background-image: url(../img/background/background_grain.jpg);
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+    z-index: 100;
+}
+
+.c2 .c2Wrap{
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 30px;
+    
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+
+
+/* C2 TOP : profile, intro, info */
+
+.c2_top{
+
+    height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.c2_top .profile{
+    width: 130px;
+    height: 130px;
+    border: 1px solid #a3c5c7;
+    border-radius: 100%;
+
+    position: relative;
+}
+
+.c2_top .profile .circle{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+
+    width: 110px; height: 110px;
+    border: 1px solid #a3c5c7;
+   
+    border-radius: 100%;
+}
+
+.c2_top .profile .pic{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+
+    width: 100px; height: 100px;
+    border-radius: 100%;
+
+    background-image: url(../img/aboutme/profile_200.jpg);
+    background-size: cover;
+}
+
+/* INTRODUCE */
+
+.c2_top .introduce{
+    position: absolute;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 200px;
+
+    border: 1px solid rgba(56, 90, 98, 0.8);
+    border-radius: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-family: 'Pretendard';
+}
+
+.c2_top .introduce div{
+    margin-left: 10px;
+}
+
+.c2_top .introduce .title{
+   width: 500px;
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 50px;
+}
+
+.c2_top .introduce .descript{
+    font-family: 'Pretendard';
+    width: 95%;
+
+    margin-left: 10px;
+
+    font-weight: 400;
+    color: #747373;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.c2_top .introduce .descript br{
+    display: none;
+}
+
+.c2_top .introduce .descript span{
+    color: #2b3232;
+    font-weight: 600;
+}
+
+/* INFO */
+
+.c2_top .info{
+   
+    margin-left: 20px;
+    height: 100px;
+    margin-top: 30px;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.c2_top .info .name{
+    font-family: 'Pretendard';
+    line-height: 20px;
+
+    
+    font-weight: 300;
+    color: #2b3232;
+
+    font-size: 22px;
+    text-align: right;
+}
+
+.c2_top .info .job{
+    font-family: 'Prata', serif;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.c2_top .info .birth{
+    font-family: 'Pretendard-Regular';
+    font-weight: 100;
+    font-size: 14px;
+    color: #385a62;
+    text-align: right;
+}
+
+
+/* C2 MIDDLE , C2 BOTTOM SETTING */
+
+.c2_middle{
+    margin-top: 40px;
+         /*완료*/
+}
+
+.c2_middle .contact{
+    display: none;
+         /*완료*/
+}
+
+.c2_middle, .c2_bottom{
+    
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+  /*완료*/
+
+.c2_middle .title, .c2_bottom .title{
+    display: flex;
+    line-height: 56px;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #617475;
+     /*완료*/
+}
+
+
+
+.c2_middle .contents,
+.c2_bottom .contents{
+    display: none;
+     /*완료*/
+}
+
+.c2_middle .title .clickBox, 
+.c2_bottom .title .clickBox{
+    height: 32px;
+    width: 32px;
+    border-radius: 100%;
+    border: 1px solid #2b3232;
+    color: #2b3232;
+    background-color: transparent;
+}
+
+.c2_middle .title .clickBox i, 
+.c2_bottom .title .clickBox i{
+    font-size: 24px;
+    transition: transform 0.2s;
+}
+
+
+/*active Class*/
+.c2_middle .title.active, 
+.c2_bottom .title.active{
+    background-color: #a3c5c7;
+    border: 1px solid #617475;
+}
+
+.c2_middle .title.active i, 
+.c2_bottom .title.active i{
+    transform: rotate(180deg);
+}
+  /*완료*/
+
+.c2_middle h3, .c2_bottom h3{
+    font-family: 'Prata', serif;
+    font-size: 28px;
+    font-weight: 100;
+    color: #2b3232;
+    /*완료*/
+}
+
+
+.c2_middle h5, .c2_bottom h5{
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-size: 16px;
+    color: #2b3232;
+    line-height: 14px;
+     /*완료*/
+}
+
+.c2_middle .detail, .c2_bottom .detail{
+    border-bottom: 1px solid #96b3b4;
+}
+ /*완료*/
+
+
+.c2_middle .contact .youtube{
+   display: none;
+}
+ /*완료*/
+
+
+.c2_bottom .detail, .c2_middle .detail{
+    color: #747373;
+    font-weight: 200;
+}
+ /*완료*/
+
+
+.c2_bottom .detail span, .c2_middle .detail span{
+    color: #2b3232;
+    font-weight: 200;
+     /*완료*/
+}
+
+
+.c2_middle .box, .c2_bottom .box{
+    margin: 20px 0;
+      /*완료*/
+}
+
+.c2_bottom .exper .ex{
+    line-height: 32px;
+    border-top: 1px solid #96b3b4;
+     /*완료*/
+}
+
+.c2_bottom .exper .date{
+    color: #747373;
+    font-weight: 200;
+     /*완료*/
+}
+
+
+.c2_bottom .exper .detail{
+    font-family: 'Pretendard';
+    border-top: 1px solid #96b3b4;
+    font-size: 14px;
+    margin-top: 10px;
+    padding-left: 30px;
+    line-height: 18px;
+    font-weight: 300;
+     /*완료*/
+}
+
+
+.c2_bottom .exper .detail li{
+    list-style-type: circle;
+     /*완료*/
+}
+
+.c2_bottom .certif{
+    position: relative;
+     /*완료*/
+
+}
+
+
+.c2_bottom .certif h5{
+    width: 320px;
+    border: 1px solid #96b3b4;
+    color: #747373;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 48px;
+    padding-left: 20px;
+    border-radius: 50px;
+         /*완료*/
+}
+
+.c2_bottom .certif .certifss{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 160px;
+    margin-top: 20px;
+         /*완료*/
+}
+
+
+/* C3 : SKILLS */
+
+.c3{
+    user-select: none;
+    width: 100%;
+    height: 100vh;
+    
+    background-image: url(../img/background/background_grain.jpg);
+    background-position: center;
+    background-size: cover;
+
+    box-sizing: border-box;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.c3 .c3Wrap{
+    width: 95%;
+    height: 500px;
+    margin-right: auto;
+    margin-left: auto;
+
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* SOFTWARE */
+
+.c3 .wrapper{
+    width: 45%;
+    height: 300px;
+    margin-top: 200px;
+}
+
+.c3 .container{
+    width: 90%;
+    margin-left: 0px;
+    
+    background-color: transparent;
+}
+
+.c3 .container h3{
+    line-height: 50px;
+    text-align: left;
+    font-size: 32px;
+    font-weight: 100;
+    margin-bottom: 20px;
+    font-family: 'Prata', serif;
+    color: #2b3232;
+}
+
+.c3 .container .skills:not(:last-child){
+    margin-bottom: 30px;
+}
+
+.c3 .container .skills .details{
+    width: 100%;
+    font-family: 'Pretendard';
+    font-weight: 200;
+    color: #385a62;
+    font-size: 16px;
+}
+
+/* BAR */
+
+.c3 .container .skills .bar{
+    position: relative;
+    border: 1px solid   #747373;
+    border-radius: 20px;
+}
+
+.c3 .container .skills .bar div{
+    position: relative;
+    width: 0;
+    height: 9px;
+    border-radius: 10px;
+    background-color: #a3c5c7;
+}
+
+/* PSDBAR */
+.c3 .psdBar{
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.c3 .container.active .psdBar{
+    animation-name: psd-fill;
+}
+
+@keyframes psd-fill{
+    100%{width: 85%;}
+}
+
+/* AIBAR */
+.c3 .aiBar{
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.c3 .container.active .aiBar{
+    animation-name: ai-fill;
+}
+
+@keyframes ai-fill{
+    100%{width: 85%;}
+}
+/* PREMIEREBAR */
+.c3 .videoBar{
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.c3 .container.active .videoBar{
+    animation-name: video-fill;
+}
+
+@keyframes video-fill{
+    100%{width: 95%;}
+}
+/* AFTEREFFECTBAR */
+.c3 .aeBar{
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.c3 .container.active .aeBar{
+    animation-name: ae-fill;
+}
+
+@keyframes ae-fill{
+    100%{width: 75%;}
+}
+
+
+/* WEB */
+
+.c3 .container .skills:not(:last-child){
+    margin-bottom: 30px;
+}
+
+
+.c3 .container .skills .bar{
+    position: relative;
+    border: 1px solid   #747373;
+    border-radius: 20px;
+}
+
+.c3 .web .container .skills .bar div{
+    position: relative;
+    width: 0;
+    height: 9px;
+    border-radius: 10px;
+    background-color:  #385a62;
+}
+
+/* HTMLBAR */
+.c3 .htmlBar{
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.c3 .container.active .htmlBar{
+    animation-name: html-fill;
+}
+
+
+@keyframes html-fill{
+    100%{width: 90%;}
+}
+
+/* CSSBAR */
+.c3 .cssBar{
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.c3 .container.active .cssBar{
+    animation-name: css-fill;
+}
+
+@keyframes css-fill{
+    100%{width: 85%;}
+}
+/* JSBAR */
+.c3 .jsBar{
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.c3 .container.active .jsBar{
+    animation-name: js-fill;
+}
+
+@keyframes js-fill{
+    100%{width: 80%;}
+}
+
+/* C3Txt */
+/*CHECK*/
+.c3 .c3Wrap .c3Txt{
+    position: absolute;
+    left: 0%;
+}
+
+.c3 .c3Wrap .c3Txt{
+    width: 50%;
+    font-family: 'Prata', serif;
+    text-align: left;
+    margin-top: 40px;
+    margin-left: 10px;
+    color: #385a62;
+}
+
+.c3 .c3Wrap .c3Txt h3{
+    font-size: 20px;
+    font-weight: 100;
+}
+.c3 .c3Wrap .c3Txt h1{
+    font-weight: 100;
+    font-size: 60px;
+}
+
+
+/* C4 : INDEX!!!!! */
+
+
+.c4{
+    user-select: none;
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(../img/background/background_grain.jpg);
+    background-size: cover;
+    background-position: center;
+
+    border-top: 1px solid  #a3c5c7;
+
+    position: relative;
+}
+
+.c4 .borderTxt{
+    color: #385a62;
+    font-family: 'Prata', serif;
+    font-weight: 100;
+    font-size: 22px;
+    position: absolute;
+    left: 50%; top: 0;
+     transform: translate(-50%,-50%);
+}
+
+.c4 .c4Wrap{
+    width: 95%;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/* C4 Txt */
+
+.c4 .c4Wrap .c4Txt{
+
+    position: absolute;
+    top: 200px;
+    left: 10px;
+
+    color: #385a62;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    width: 300px;
+    height: 100px;
+    /*완료*/
+}
+
+
+.c4 .c4Wrap .c4Txt .c4Title{
+    font-family: 'Prata', serif;
+    font-weight: 100;
+    font-size: 48px;
+    line-height: 60px;
+
+    width: 200px;
+    text-align: left;
+    /*완료*/
+
+}
+.c4 .c4Wrap .c4Txt .c4SubTitle{
+    
+    font-family: 'Pretendard';
+    font-weight: 200;
+    font-style: italic;
+    font-size: 18px;
+    /*완료*/
+}
+
+/* C4 Con */
+
+.c4 .c4Wrap .c4Con{
+
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 320px;
+    left: 0px;
+}
+
+.c4 .c4Wrap .c4Con .index{
+
+    display: flex;
+    align-items: baseline;
+
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-style: italic;
+
+    line-height: 48px;
+    /*완료*/
+}
+
+.c4 .c4Wrap .c4Con .index .num{
+    color:  #a3c5c7;
+    font-size: 16px;
+    width: 40px;
+    text-align: center;
+}
+.c4 .c4Wrap .c4Con .index .page{
+    color: #385a62;
+    font-size: 20px;
+    font-weight: 600;
+}
+.c4 .c4Wrap .c4Con .index .category{
+    color: #385a62;
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 10px;
+    line-height: 32px;
+
+}
+
+
+/* PROJECT NAVIGATION */
+
+.navi{
+    display: none;
+}
+
+
+/* C5 AESOP */
+
+.c5{
+    user-select: none;
+    width: 100%;
+   
+
+    background-image: url(../img/project/aesop/forest_dark2.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.c5 .proWrap{
+    width: 95%;
+    padding-bottom: 100px;
+
+   margin-right: auto;
+   margin-left: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* LEFT : TXT */
+
+.c5 .proWrap .left{
+
+    color: #fff;
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.c5 .proWrap .left .projectTitle{
+    display: flex;
+    font-family: 'Pretendard';  
+
+    font-size: 20px;
+    line-height: 45px;
+    letter-spacing: 1px;
+
+    margin-top: 80px;
+    margin-left: 0px;
+}
+
+.c5 .proWrap .left .projectTitle h1{
+    font-weight: 600;
+}
+
+.c5 .proWrap .left .projectTitle .num{
+    font-style: italic;
+    width: 45px;
+}
+
+.c5 .proWrap .left .category{
+    margin-top: 8px;
+    margin-left: 0px;
+    width: fit-content;
+    padding: 4px 16px;
+    line-height: 40px;
+
+    border: 1px solid #fff;
+    border-radius: 50px;
+
+    font-family: 'Pretendard';
+    text-align: center;
+    font-weight: 200;
+    font-size: 18px;
+    
+}
+
+.c5 .proWrap .left .descript{
+
+    margin-left: 10px;
+    font-family: 'Pretendard';
+
+    font-weight: 200;
+    font-size: 16px;
+
+
+    margin-top: 40px;
+}
+
+/* RIGHT : MOCKUP */
+
+.c5 .proWrap .right{
+    /*추가된 세팅*/
+    /* margin-top: 40px; */
+    margin-top: 40px;
+
+    width: 100%;
+    
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.c5 .proWrap .right a{
+    border: 1px solid white;
+    z-index: 800;
+
+
+    color: #fff;
+    width: 240px;
+    
+    text-align: center;
+    line-height: 36px;
+    font-family: 'Pretendard';
+    font-weight: 200;
+    font-size: 20px;
+
+    letter-spacing: 2px;
+    border-radius: 75px;
+
+    transition: all 0.2s;
+}
+
+.c5 .proWrap .right a.active{
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #363636;
+    border: 0;
+}
+
+.c5 .caution{
+    color: #fff;
+    font-family: 'Pretendard';
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.c5 .proWrap .right .mockup{
+    width: 90%;
+    height: 300px;
+
+    background-image: url(../img/project/aesop/aseop_pc_mockup.png);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+/* C6 LOUISPOULSEN */
+
+.c6{
+    user-select: none;
+    width: 100%;
+   
+
+    background-image: url(../img/project/louispoulsen/Louis_Poulsen_PH_Septima_4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.c6 .proWrap{
+    width: 95%;
+    padding-bottom: 100px;
+
+   margin-right: auto;
+   margin-left: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* LEFT : TXT */
+
+.c6 .proWrap .left{
+
+    color: #fff;
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.c6 .proWrap .left .projectTitle{
+    display: flex;
+    font-family: 'Pretendard';  
+
+    font-size: 20px;
+    line-height: 45px;
+    letter-spacing: 1px;
+
+    margin-top: 80px;
+    margin-left: 0px;
+}
+
+.c6 .proWrap .left .projectTitle h1{
+    font-weight: 600;
+}
+
+.c6 .proWrap .left .projectTitle .num{
+    font-style: italic;
+    width: 45px;
+}
+
+.c6 .proWrap .left .category{
+    margin-top: 8px;
+    margin-left: 0px;
+    width: fit-content;
+    padding: 4px 16px;
+    line-height: 40px;
+
+    border: 1px solid #fff;
+    border-radius: 50px;
+
+    font-family: 'Pretendard';
+    text-align: center;
+    font-weight: 200;
+    font-size: 18px;
+    
+}
+
+.c6 .proWrap .left .descript{
+
+    margin-left: 10px;
+    font-family: 'Pretendard';
+
+    font-weight: 200;
+    font-size: 16px;
+
+
+    margin-top: 40px;
+}
+
+/* RIGHT : MOCKUP */
+
+.c6 .proWrap .right{
+    /*추가된 세팅*/
+    /* margin-top: 40px; */
+    margin-top: 40px;
+
+    width: 100%;
+    
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.c6 .proWrap .right a{
+    border: 1px solid white;
+    z-index: 800;
+
+
+    color: #fff;
+    width: 240px;
+    
+    text-align: center;
+    line-height: 36px;
+    font-family: 'Pretendard';
+    font-weight: 200;
+    font-size: 20px;
+
+    letter-spacing: 2px;
+    border-radius: 75px;
+
+    transition: all 0.2s;
+}
+
+.c6 .proWrap .right a.active{
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #363636;
+    border: 0;
+}
+
+.c6 .caution{
+    color: #fff;
+    font-family: 'Pretendard';
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.c6 .proWrap .right .mockup{
+    width: 90%;
+    height: 300px;
+
+    background-image: url(../img/project/louispoulsen/louispoulsen_pc_mokup.png);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+/* C7 BANG N OLUFSEN */
+
+.c7{
+    user-select: none;
+    width: 100%;
+   
+
+    background-image: url(../img/project/react/blackBg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.c7 .proWrap{
+    width: 95%;
+    padding-bottom: 100px;
+
+   margin-right: auto;
+   margin-left: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* LEFT : TXT */
+
+.c7 .proWrap .left{
+
+    color: #fff;
+    width: 100%;
+
+ 
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.c7 .proWrap .left .projectTitle{
+    display: flex;
+    font-family: 'Pretendard';  
+
+    font-size: 18px;
+    line-height: 45px;
+    letter-spacing: 1px;
+
+    margin-top: 80px;
+    margin-left: 0px;
+}
+
+.c7 .proWrap .left .projectTitle h1{
+    font-weight: 600;
+}
+
+.c7 .proWrap .left .projectTitle .num{
+    font-style: italic;
+    width: 45px;
+}
+
+.c7 .proWrap .left .category{
+    margin-top: 8px;
+    margin-left: 0px;
+    width: fit-content;
+    padding: 4px 16px;
+    line-height: 40px;
+
+    border: 1px solid #fff;
+    border-radius: 50px;
+
+    font-family: 'Pretendard';
+    text-align: center;
+    font-weight: 200;
+    font-size: 18px;
+    
+}
+
+.c7 .proWrap .left .descript{
+
+    margin-left: 10px;
+    font-family: 'Pretendard';
+
+    font-weight: 200;
+    font-size: 16px;
+
+
+    margin-top: 40px;
+}
+
+/* RIGHT : MOCKUP */
+
+.c7 .proWrap .right{
+    /*추가된 세팅*/
+    margin-top: 40px;
+
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.c7 .proWrap .right a{
+    border: 1px solid white;
+    z-index: 800;
+
+
+    color: #fff;
+    width: 240px;
+    
+    text-align: center;
+    line-height: 36px;
+    font-family: 'Pretendard';
+    font-weight: 200;
+    font-size: 20px;
+
+    letter-spacing: 2px;
+    border-radius: 75px;
+
+    transition: all 0.2s;
+}
+
+.c7 .proWrap .right a.active{
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #363636;
+    border: 0;
+}
+
+.c7 .caution{
+    color: #fff;
+    font-family: 'Pretendard';
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.c7 .proWrap .right .mockup_react{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.c7 .proWrap .right .mockup{
+    width: 70%;
+    height: 250px;
+
+    background-image: url(../img/project/react/bno_pc_mokup.png);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.c7 .proWrap .right .mockupMobile{
+   width: 20%;
+    height: 200px;
+    transform: rotate(5deg);
+
+    overflow: hidden;
+    
+    background-size: cover;
+    background-position: center;
+   background-image: url(../img/project/react/bno_mobile_mokup.png);
+}
+
+
+
+/* C7_2 MMMG */
+
+.c7_2{
+    user-select: none;
+    width: 100%;
+   
+
+    background-image: url(../img/project/mmmg/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.c7_2 .proWrap{
+    width: 95%;
+    padding-bottom: 100px;
+
+   margin-right: auto;
+   margin-left: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* LEFT : TXT */
+
+.c7_2 .proWrap .left{
+
+    color: #fff;
+    width: 100%;
+
+ 
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.c7_2 .proWrap .left .projectTitle{
+    display: flex;
+    font-family: 'Pretendard';  
+
+    font-size: 18px;
+    line-height: 45px;
+    letter-spacing: 1px;
+
+    margin-top: 80px;
+    margin-left: 0px;
+}
+
+.c7_2 .proWrap .left .projectTitle h1{
+    font-weight: 600;
+}
+
+.c7_2 .proWrap .left .projectTitle .num{
+    font-style: italic;
+    width: 45px;
+}
+
+.c7_2 .proWrap .left .category{
+    margin-top: 8px;
+    margin-left: 0px;
+    width: fit-content;
+    padding: 4px 16px;
+    line-height: 40px;
+
+    border: 1px solid #fff;
+    border-radius: 50px;
+
+    font-family: 'Pretendard';
+    text-align: center;
+    font-weight: 200;
+    font-size: 18px;
+    
+}
+
+.c7_2 .proWrap .left .descript{
+
+    margin-left: 10px;
+    font-family: 'Pretendard';
+
+    font-weight: 200;
+    font-size: 16px;
+
+
+    margin-top: 40px;
+}
+
+/* RIGHT : MOCKUP */
+
+.c7_2 .proWrap .right{
+    /*추가된 세팅*/
+    margin-top: 40px;
+
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.c7_2 .proWrap .right a{
+    border: 1px solid white;
+    z-index: 800;
+
+
+    color: #fff;
+    width: 240px;
+    
+    text-align: center;
+    line-height: 36px;
+    font-family: 'Pretendard';
+    font-weight: 200;
+    font-size: 20px;
+
+    letter-spacing: 2px;
+    border-radius: 75px;
+
+    transition: all 0.2s;
+}
+
+.c7_2 .proWrap .right a.active{
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #363636;
+    border: 0;
+}
+
+.c7_2 .caution{
+    color: #fff;
+    font-family: 'Pretendard';
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.c7_2 .proWrap .right .mockup_react{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.c7_2 .proWrap .right .mockup{
+    width: 70%;
+    height: 250px;
+
+    background-image: url(../img/project/mmmg/mmmg_pc_mokup.png);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.c7_2 .proWrap .right .mockupMobile{
+   width: 20%;
+    height: 200px;
+    transform: rotate(5deg);
+
+    overflow: hidden;
+    
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/project/mmmg/mmmg_mobile_mokup.png);
+}
+
+
+
+/* C7_3 WEBAPP */
+
+.c7_3{
+    user-select: none;
+    width: 100%;
+   
+
+    background-image: url(../img/project/webapp/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.c7_3 .proWrap{
+    width: 95%;
+    padding-bottom: 100px;
+
+   margin-right: auto;
+   margin-left: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* LEFT : TXT */
+
+.c7_3 .proWrap .left{
+
+    color: #fff;
+    width: 100%;
+
+ 
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.c7_3 .proWrap .left .projectTitle{
+    display: flex;
+    font-family: 'Pretendard';  
+
+    font-size: 18px;
+    line-height: 45px;
+    letter-spacing: 1px;
+
+    margin-top: 80px;
+    margin-left: 0px;
+}
+
+.c7_3 .proWrap .left .projectTitle h1{
+    font-weight: 600;
+}
+
+.c7_3 .proWrap .left .projectTitle .num{
+    font-style: italic;
+    width: 45px;
+}
+
+.c7_3 .proWrap .left .category{
+    margin-top: 8px;
+    margin-left: 0px;
+    width: fit-content;
+    padding: 4px 16px;
+    line-height: 40px;
+
+    border: 1px solid #fff;
+    border-radius: 50px;
+
+    font-family: 'Pretendard';
+    text-align: center;
+    font-weight: 200;
+    font-size: 18px;
+    
+}
+
+.c7_3 .proWrap .left .descript{
+
+    margin-left: 10px;
+    font-family: 'Pretendard';
+
+    font-weight: 200;
+    font-size: 16px;
+
+
+    margin-top: 40px;
+}
+
+/* RIGHT : MOCKUP */
+
+.c7_3 .proWrap .right{
+    /*추가된 세팅*/
+    margin-top: 40px;
+
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.c7_3 .proWrap .right a{
+    border: 1px solid white;
+    z-index: 800;
+
+
+    color: #fff;
+    width: 240px;
+    
+    text-align: center;
+    line-height: 36px;
+    font-family: 'Pretendard';
+    font-weight: 200;
+    font-size: 20px;
+
+    letter-spacing: 2px;
+    border-radius: 75px;
+
+    transition: all 0.2s;
+}
+
+.c7_3 .proWrap .right a.active{
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #363636;
+    border: 0;
+}
+
+.c7_3 .caution{
+    color: #fff;
+    font-family: 'Pretendard';
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.c7_3 .proWrap .right .mockup_react{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.c7_3 .proWrap .right .mockup{
+    width: 70%;
+    height: 250px;
+
+    background-image: url(../img/project/webapp/artgallery_pc_mokup.png);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.c7_3 .proWrap .right .mockupMobile{
+   width: 20%;
+    height: 200px;
+    transform: rotate(5deg);
+
+    overflow: hidden;
+    
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/project/webapp/argalerry_mobile_mokup.png);
+}
+
+
+/* C8-GALLERY */
+
+.c8{
+    user-select: none;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+   background-image: url(../img/background/gray_background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.c8 .c8Wrap{
+    width: 95%;
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.c8 .c8Wrap .c8Title{
+    position: absolute;
+    color: #a3c5c7;
+    left: 10px;
+    font-family: 'Prata';
+    font-weight: 100;
+    font-size: 72px;
+    opacity: 0.4;
+}
+
+.c8 .c8Wrap .top{
+    width: 100%;
+    height: 25vh;
+
+    display: flex;
+    align-items: center;
+    /*위에꺼추가됨*/
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.c8 .c8Wrap .bottom{
+    width: 100%;
+    height: 25vh;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.c8 .c8Wrap .box{
+    width: 30%;
+   height: 140px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 0.5s;
+    position: relative;
+}
+
+.c8 .c8Wrap .box:hover{
+    opacity: 0.8;
+}
+
+.c8 .c8Wrap .box1{
+    background-image: url(../img/project/gallery/pink.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.c8 .c8Wrap .box2{
+    background-image: url(../img/project/gallery/graduation_shoes.png);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+.c8 .c8Wrap .box3{
+    background-image: url(../img/project/gallery/GamMeIN_brown.png);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.c8 .c8Wrap .box4{
+    background-image: url(../img/project/gallery/ILLUST_KOPC.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.c8 .c8Wrap .box5{
+    background-image: url(../img/project/gallery/1000breakfast.png);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.c8 .c8Wrap .box6{
+    background-image: url(../img/project/gallery/CCC_black.png);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.c8 .c8Wrap a{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+.c8 .viewImg{
+
+  display: none;
+
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    top: 0;
+    left: 0;
+}
+
+.c8 .viewImg img{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+/* C9 : Contact */
+
+.c9{
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(../img/background/background_grain.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.c9 .c9Wrap{
+    width: 95%; 
+    margin-top: 200px;
+    margin-right: auto;
+    margin-left: auto;
+
+    position: relative;
+}
+
+.c9 .c9Wrap h1{
+    font-family: 'Prata', serif;
+    font-weight: 100;
+    color: #385a62;
+    font-size: 36px;
+}
+
+.c9 .c9Wrap .c9Title{
+
+}
+
+.c9 .c9Wrap .box{
+
+    border: 1px solid #a3c5c7;
+   width: 95%;
+    height: 400px;
+   margin-right: auto;
+   margin-left: auto;
+   border-radius: 75px;
+}
+
+.c9 .c9Wrap .box>div{
+    border-bottom: 1px solid #a3c5c7;
+
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    line-height: 28px;
+    /* width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    line-height: 40px;
+    align-items: center;
+
+    border-bottom: 1px solid #a3c5c7; */
+}
+
+.c9 .c9Wrap .box>div:first-child{
+    margin-top: 40px;
+}
+
+.c9 .c9Wrap .box>div:not(:first-child){
+    margin-top: 16px;
+}
+
+
+.c9 .c9Wrap .box>div .title{
+    font-family: 'Prata',serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: #385a62;
+    margin-left: 20px;
+
+    width: 80px;
+
+}
+.c9 .c9Wrap .box>div .detail{
+    font-family: 'Pretendard';
+    font-weight: 300;
+    color: #747373;
+    font-size: 14px;
+    text-align: right;
+
+}
+
+.c9 .c9Wrap .box h1{
+
+    font-family: 'Prata', serif;
+    font-weight: 100;
+    color: #385a62;
+    font-size: 28px;
+    text-align: right;
+    line-height: 80px;
+
+    /* text-align: right;
+    line-height: 120px;
+    padding-right: 60px; */
+}
